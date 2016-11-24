@@ -4,6 +4,30 @@
   
     
     <entry>
+      <title><![CDATA[Data Structure - Stack(Linked-List implementation)]]></title>
+      <url>http://yoursite.com/2016/11/24/Data%20Structure-Stack/</url>
+      <content type="html"><![CDATA[<h2 id="Data-Structure-Princeton-Algorithm"><a href="#Data-Structure-Princeton-Algorithm" class="headerlink" title="Data Structure - Princeton Algorithm"></a>Data Structure - Princeton Algorithm</h2><h3 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 Stack"></a>栈 Stack</h3><h4 id="Basic-API-of-Stack"><a href="#Basic-API-of-Stack" class="headerlink" title="Basic API of Stack"></a>Basic API of Stack</h4><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Stack&lt;Item&gt; implements Iterable&lt;Item&gt;</div><div class="line"></div><div class="line">Stack() //创建空栈</div><div class="line"></div><div class="line">void push(Item item) //向栈中添加元素</div><div class="line"></div><div class="line">Item pop() //从栈中删除最近添加元素</div><div class="line"></div><div class="line">boolean isEmpty() 检测栈是否为空</div><div class="line"></div><div class="line">int size() //栈中包含元素的数量</div></pre></td></tr></table></figure>
+<h4 id="Stack的实现方式"><a href="#Stack的实现方式" class="headerlink" title="Stack的实现方式"></a>Stack的实现方式</h4><ul>
+<li><p>Linked_list</p>
+<ul>
+<li>定义： 链表是一种递归的数据结构，它可以为空(null)，也可以指向对一个节点的(node)的引用，该结点含有一个泛型元素和一个指向另一条链表的引用。 结点可作为任意数据类型的抽象实体。</li>
+</ul>
+</li>
+</ul>
+<h4 id="stack-push-的-linkedlist-实现"><a href="#stack-push-的-linkedlist-实现" class="headerlink" title="stack push 的 linkedlist 实现"></a>stack push 的 linkedlist 实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">inner class</div><div class="line">private class Node&#123;</div><div class="line">    String item;</div><div class="line">    Node next;</div><div class="line">&#125;</div><div class="line">//对节点进行初始化</div></pre></td></tr></table></figure>
+<ul>
+<li><p>Push 操作</p>
+<p>  <img src="http://algs4.cs.princeton.edu/13stacks/images/linked-list-insert-front.png" alt="enter image description here"></p>
+</li>
+<li><p>Pop 操作</p>
+<p>  <img src="http://algs4.cs.princeton.edu/13stacks/images/linked-list-remove-first.png" alt="enter image description here"></p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedStackOfStrings</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> Node first = <span class="keyword">null</span>;</div><div class="line">    <span class="comment">// Initialize the first node of the linkedlist</span></div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</div><div class="line">        String item;</div><div class="line">        Node next;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> first == <span class="keyword">null</span>;</div><div class="line">        <span class="comment">//judge if the stack is empty</span></div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(String item)</span></span>&#123;</div><div class="line">        Node oldfirst = first;</div><div class="line">        <span class="comment">//将当前的首位赋值给临时的oldfirst</span></div><div class="line">        first.item = item;</div><div class="line">        <span class="comment">//将压入stack的item复制给新的first</span></div><div class="line">        first.next = oldfirst;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">pop</span><span class="params">()</span></span>&#123;</div><div class="line">        String item = first.item;</div><div class="line">        first = first.next;</div><div class="line">        <span class="keyword">return</span> item;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Union-Find Algorithm]]></title>
       <url>http://yoursite.com/2016/11/12/Union-Find-Algorithm/</url>
       <content type="html"><![CDATA[<h2 id="Princeton-Algorithm"><a href="#Princeton-Algorithm" class="headerlink" title="Princeton- Algorithm"></a>Princeton- Algorithm</h2><p>1st week：Union-Find</p>
