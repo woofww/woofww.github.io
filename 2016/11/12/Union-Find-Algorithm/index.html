@@ -85,13 +85,13 @@
 
 
 <meta name="description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0-N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
+问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Union-Find Algorithm">
 <meta property="og:url" content="http://yoursite.com/2016/11/12/Union-Find-Algorithm/index.html">
 <meta property="og:site_name" content="EmptyNode">
 <meta property="og:description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0-N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
+问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
 <meta property="og:image" content="http://obpbs8a3y.bkt.clouddn.com/1.jpg">
 <meta property="og:image" content="http://img.blog.csdn.net/20130901114328078">
 <meta property="og:image" content="http://i2.piimg.com/567571/38bfecc955fdf85c.jpg">
@@ -99,11 +99,11 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20140531203442953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="http://img.blog.csdn.net/20130901134321640">
 <meta property="og:image" content="http://img.blog.csdn.net/20140602174057171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2016-11-24T15:05:59.947Z">
+<meta property="og:updated_time" content="2016-11-25T14:24:15.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Union-Find Algorithm">
 <meta name="twitter:description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0-N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
+问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
 <meta name="twitter:image" content="http://obpbs8a3y.bkt.clouddn.com/1.jpg">
 
 
@@ -345,7 +345,7 @@
 
       
         <h2 id="Princeton-Algorithm"><a href="#Princeton-Algorithm" class="headerlink" title="Princeton - Algorithm"></a>Princeton - Algorithm</h2><p>1st week：Union-Find</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有N个元素，从0-N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br><a id="more"></a><br><img src="http://obpbs8a3y.bkt.clouddn.com/1.jpg" alt="enter image description here"><br><img src="http://img.blog.csdn.net/20130901114328078" alt="enter image description here"></p>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br><a id="more"></a><br><img src="http://obpbs8a3y.bkt.clouddn.com/1.jpg" alt="enter image description here"><br><img src="http://img.blog.csdn.net/20130901114328078" alt="enter image description here"></p>
 <p>从上图中可以看出，0, 1, 2, 5, 6, 7 中的任意两个元素都是相连的，同样 3, 4, 8, 9 中任意两个元素也是互连的，但是第一个集合和第二个集合的元素却是无法连通的。</p>
 <p>实际操作中可用于在一个庞大的网路环境下，如何迅速判断某两个点是否相连，如下图：</p>
 <p><img src="http://i2.piimg.com/567571/38bfecc955fdf85c.jpg" alt="enter image description here"></p>
