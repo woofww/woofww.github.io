@@ -92,7 +92,7 @@
 <meta property="og:description" content="Data Structure - Princeton Algorithm栈 StackBasic API of Stack">
 <meta property="og:image" content="http://algs4.cs.princeton.edu/13stacks/images/linked-list-insert-front.png">
 <meta property="og:image" content="http://algs4.cs.princeton.edu/13stacks/images/linked-list-remove-first.png">
-<meta property="og:updated_time" content="2016-11-24T15:01:39.739Z">
+<meta property="og:updated_time" content="2016-11-25T13:54:02.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Data Structure - Stack(Linked-List implementation)">
 <meta name="twitter:description" content="Data Structure - Princeton Algorithm栈 StackBasic API of Stack">
@@ -337,7 +337,7 @@
 
       
         <h2 id="Data-Structure-Princeton-Algorithm"><a href="#Data-Structure-Princeton-Algorithm" class="headerlink" title="Data Structure - Princeton Algorithm"></a>Data Structure - Princeton Algorithm</h2><h3 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 Stack"></a>栈 Stack</h3><h4 id="Basic-API-of-Stack"><a href="#Basic-API-of-Stack" class="headerlink" title="Basic API of Stack"></a>Basic API of Stack</h4><a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Stack&lt;Item&gt; implements Iterable&lt;Item&gt;</div><div class="line"></div><div class="line">Stack() //创建空栈</div><div class="line"></div><div class="line">void push(Item item) //向栈中添加元素</div><div class="line"></div><div class="line">Item pop() //从栈中删除最近添加元素</div><div class="line"></div><div class="line">boolean isEmpty() 检测栈是否为空</div><div class="line"></div><div class="line">int size() //栈中包含元素的数量</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class Stack&lt;Item&gt; implements Iterable&lt;Item&gt;</span></div><div class="line"></div><div class="line"><span class="title">Stack</span><span class="params">()</span> <span class="comment">//创建空栈</span></div><div class="line"></div><div class="line"><span class="keyword">void</span> <span class="title">push</span><span class="params">(Item item)</span> <span class="comment">//向栈中添加元素</span></div><div class="line"></div><div class="line">Item <span class="title">pop</span><span class="params">()</span> <span class="comment">//从栈中删除最近添加元素</span></div><div class="line"></div><div class="line"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> 检测栈是否为空</div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> <span class="comment">//栈中包含元素的数量</span></div></pre></td></tr></table></figure>
 <h4 id="Stack的实现方式"><a href="#Stack的实现方式" class="headerlink" title="Stack的实现方式"></a>Stack的实现方式</h4><ul>
 <li><p>Linked_list</p>
 <ul>
@@ -345,7 +345,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="stack-的-linkedlist-实现"><a href="#stack-的-linkedlist-实现" class="headerlink" title="stack 的 linkedlist 实现"></a>stack 的 linkedlist 实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">inner class</div><div class="line">private class Node&#123;</div><div class="line">    String item;</div><div class="line">    Node next;</div><div class="line">&#125;</div><div class="line">//对节点进行初始化</div></pre></td></tr></table></figure>
+<h4 id="stack-的-linkedlist-实现"><a href="#stack-的-linkedlist-实现" class="headerlink" title="stack 的 linkedlist 实现"></a>stack 的 linkedlist 实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">inner <span class="class"><span class="keyword">class</span></span></div><div class="line"><span class="title">private</span> <span class="title">class</span> <span class="title">Node</span>&#123;</div><div class="line">    String item;</div><div class="line">    Node next;</div><div class="line">&#125;</div><div class="line"><span class="comment">//对节点进行初始化</span></div></pre></td></tr></table></figure>
 <ul>
 <li><p>Push 操作</p>
 <p>  <img src="http://algs4.cs.princeton.edu/13stacks/images/linked-list-insert-front.png" alt="enter image description here"></p>
