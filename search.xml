@@ -39,7 +39,7 @@
 </li>
 </ul>
 <h2 id="上述两种方式的比较"><a href="#上述两种方式的比较" class="headerlink" title="上述两种方式的比较"></a>上述两种方式的比较</h2><ul>
-<li>linkedlist<ul>
+<li>Linkedlist<ul>
 <li>最差情况下，每一步操作都要消耗恒定时间</li>
 <li>需要花费额外的时间和空间对链接进行处理</li>
 </ul>
