@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[Algorithm-Sorting]]></title>
+      <title><![CDATA[Algorithm-Elementary Sorting]]></title>
       <url>http://yoursite.com/2016/11/28/Algorithm-Sorting/</url>
       <content type="html"><![CDATA[<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>排序算法的目的是将数组元素的主键依照某种方式进行排序。排序后索引较大的主键大于或等于索引较小的主键。</p>
 <p>在java当中，元素通常都是对象，对主键的抽象描述是通过一种内部构建的机制来完成的(java中的Comparable接口)</p>
