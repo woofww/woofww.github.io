@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Algorithm," />
 
 
 
@@ -84,13 +84,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="All tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="归并排序 复杂度(nlogn)概念
+对于归并的概念，简而言之就是分治，对于独立的部分单独地进行排序然后再将排序完成的子数组进行合并，最终完成全部排序。但是归并排序由于需要额外数组，所以空间复杂度也比较高。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm-Advanced Sorting">
+<meta property="og:url" content="http://yoursite.com/2016/12/07/Algorithm-Advanced-Sorting/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:updated_time" content="2016-11-23T03:08:54.319Z">
+<meta property="og:description" content="归并排序 复杂度(nlogn)概念
+对于归并的概念，简而言之就是分治，对于独立的部分单独地进行排序然后再将排序完成的子数组进行合并，最终完成全部排序。但是归并排序由于需要额外数组，所以空间复杂度也比较高。">
+<meta property="og:image" content="http://algs4.cs.princeton.edu/22mergesort/images/mergesort-overview.png">
+<meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/merge-sort_8993d8.gif">
+<meta property="og:image" content="http://7xrsib.com1.z0.glb.clouddn.com/sortMerge-sort-example-300px.gif">
+<meta property="og:updated_time" content="2016-12-07T13:53:22.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="All tags">
+<meta name="twitter:title" content="Algorithm-Advanced Sorting">
+<meta name="twitter:description" content="归并排序 复杂度(nlogn)概念
+对于归并的概念，简而言之就是分治，对于独立的部分单独地进行排序然后再将排序完成的子数组进行合并，最终完成全部排序。但是归并排序由于需要额外数组，所以空间复杂度也比较高。">
+<meta name="twitter:image" content="http://algs4.cs.princeton.edu/22mergesort/images/mergesort-overview.png">
 
 
 
@@ -108,13 +118,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    标签 | EmptyNode
-  
-</title>
+  <title> Algorithm-Advanced Sorting | EmptyNode </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,7 +139,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,16 +262,158 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 3 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Algorithm-Advanced Sorting
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-07T21:30:31+08:00" content="2016-12-07">
+              2016-12-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Technique/" itemprop="url" rel="index">
+                    <span itemprop="name">Technique</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Algorithm/" style="font-size: 30px; color: #111">Algorithm</a> <a href="/tags/Data-Structure/" style="font-size: 12px; color: #ccc">Data Structure</a> <a href="/tags/Intellij/" style="font-size: 12px; color: #ccc">Intellij</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="归并排序-复杂度-nlogn"><a href="#归并排序-复杂度-nlogn" class="headerlink" title="归并排序 复杂度(nlogn)"></a>归并排序 复杂度(nlogn)</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>对于归并的概念，简而言之就是分治，对于独立的部分单独地进行排序然后再将排序完成的子数组进行合并，最终完成全部排序。但是归并排序由于需要额外数组，所以空间复杂度也比较高。<br><a id="more"></a></p>
+</blockquote>
+<p><img src="http://algs4.cs.princeton.edu/22mergesort/images/mergesort-overview.png" alt="enter image description here"></p>
+<ul>
+<li><p>样例</p>
+<p>  <img src="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/merge-sort_8993d8.gif" alt="enter image description here"></p>
+</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="原地归并的抽象方法"><a href="#原地归并的抽象方法" class="headerlink" title="原地归并的抽象方法"></a>原地归并的抽象方法</h4><ul>
+<li><p>原地归并为直接将两个不同的有序数组合并到第三个数组当中，当然该数组最终是有序的。原理：首先将原数组存放至一个临时数组当中，并通过指定参数如i和j指向数组的起始位置low和中间位置middle。以此保证了原数组左右两边是有序的。从左右两个独立数组的头部开始扫描数组，此时对array[i]和array[j]进行比较，将较大值放入临时数组。</p>
+<ul>
+<li><p>Example:</p>
+<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/sortMerge-sort-example-300px.gif" alt="enter image description here"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>抽象地描述便是merge(a, low, middle, high)，该方法会将a[low..middle]，a[middle..high]归并为一个有序的数组并将结果存放在a[low..high]当中。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeSort</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">//to be Update</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/28/Algorithm-Sorting/" rel="next" title="Algorithm-Elementary Sorting">
+                <i class="fa fa-chevron-left"></i> Algorithm-Elementary Sorting
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -299,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -379,6 +534,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序-复杂度-nlogn"><span class="nav-number">1.</span> <span class="nav-text">归并排序 复杂度(nlogn)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原地归并的抽象方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">原地归并的抽象方法</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -475,6 +641,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
