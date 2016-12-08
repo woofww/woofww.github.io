@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://algs4.cs.princeton.edu/22mergesort/images/mergesort-overview.png">
 <meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/merge-sort_8993d8.gif">
 <meta property="og:image" content="http://7xrsib.com1.z0.glb.clouddn.com/sortMerge-sort-example-300px.gif">
-<meta property="og:updated_time" content="2016-12-07T14:07:07.955Z">
+<meta property="og:updated_time" content="2016-12-08T12:07:08.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-Advanced Sorting">
 <meta name="twitter:description" content="归并排序
@@ -362,16 +362,14 @@
 </li>
 </ul>
 <h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="原地归并的抽象方法"><a href="#原地归并的抽象方法" class="headerlink" title="原地归并的抽象方法"></a>原地归并的抽象方法</h4><ul>
-<li><p>原地归并为直接将两个不同的有序数组合并到第三个数组当中，当然该数组最终是有序的。原理：首先将原数组存放至一个临时数组当中，并通过指定参数如i和j指向数组的起始位置low和中间位置middle。以此保证了原数组左右两边是有序的。从左右两个独立数组的头部开始扫描数组，此时对array[i]和array[j]进行比较，将较大值放入临时数组。</p>
-<ul>
 <li><p>Example:</p>
-<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/sortMerge-sort-example-300px.gif" alt="enter image description here"></p>
+<p>  <img src="http://7xrsib.com1.z0.glb.clouddn.com/sortMerge-sort-example-300px.gif" alt="enter image description here"></p>
 </li>
-</ul>
+<li><p>原地归并为直接将两个不同的有序数组合并到第三个数组当中，当然该数组最终是有序的。原理：首先将原数组存放至一个临时数组当中，并通过指定参数如i和j指向数组的起始位置<code>low</code>和中间位置<code>middle</code>。以此保证了原数组左右两边是有序的。从左右两个独立数组的头部开始扫描数组，此时对<code>array[i]</code>和<code>array[j]</code>进行比较，将较大值放入临时数组。</p>
 </li>
 </ul>
 <ul>
-<li>抽象地描述便是merge(a, low, middle, high)，该方法会将a[low..middle]，a[middle..high]归并为一个有序的数组并将结果存放在a[low..high]当中。</li>
+<li>抽象地描述便是<code>merge(a, low, middle, high)</code>，该方法会将<code>a[low..middle]</code>，<code>a[middle..high]</code>归并为一个有序的数组并将结果存放在<code>a[low..high]</code>当中。</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeSort</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">//to be Update</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
