@@ -33,6 +33,28 @@
 <h4 id="自顶向下归并排序"><a href="#自顶向下归并排序" class="headerlink" title="自顶向下归并排序"></a>自顶向下归并排序</h4><p>自顶向下排序实现了一种递归归并的方法， 实现了一种典型的分治思想，运用迭代的思想将两个独立的子数组进行排序，并最终完成归并；对于一个长度为N的任意数组， 自顶向下归并排序需要进行1/2NloN到NlgN的比较；<a href="http://algs4.cs.princeton.edu/22mergesort/" target="_blank" rel="external"><code>(参考 Reference)</code></a></p>
 <p><img src="http://algs4.cs.princeton.edu/22mergesort/images/mergesortTD.png" alt="enter image description here"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] data, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span> (high &lt;= low) <span class="keyword">return</span>;<span class="comment">//此种情况结束递归，即无法再继续进行分割</span></div><div class="line">    <span class="keyword">int</span> middle = low + (high - low)/<span class="number">2</span>;</div><div class="line">    sort(data, low, middle);<span class="comment">//对数组左半部分进行排序</span></div><div class="line">    sort(data, middle+<span class="number">1</span>, high);<span class="comment">//对右半部份进行排序</span></div><div class="line">    merge(data, low, middle, high);<span class="comment">//不断进行递归，直到无法继续进行直到结束</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="优化方式"><a href="#优化方式" class="headerlink" title="优化方式"></a>优化方式</h5><ul>
+<li><p>对于规模较小的子数组使用插入排序</p>
+<p>由于归并排序中频繁的使用了递归的方式进行操作，操作过程中对于一些小规模的数组，可以先对其进行插入排序，因为对于子数组(长度小于15)的排序，插入排序的效率会更高一些，运行时间一般可以缩短10%到15%。</p>
+</li>
+<li><p>测试数组是否已经有序</p>
+<p>  在merge之前先对数组进行判断是否已经有序，如果有序则直接跳过merge步骤</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (!data[i+<span class="number">1</span>] &lt; data[i] ) &#123;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><blockquote>
+<p>复杂度(nlogn)</p>
+</blockquote>
+<h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>快速排序同样属于一种分治算法，将一个数组分为两个子数组，然后将两部分进行独立的排序。</p>
+<blockquote>
+<p>和归并排序的区别：对于归并排序是先对独立的子数组进行排序，然后在将排序后的子数组进行归并而将整个数组进行排序。快速排序在将子数组排序之后，整体数组也同时完成了排序。</p>
+</blockquote>
+<p><img src="http://algs4.cs.princeton.edu/23quicksort/images/quicksort-overview.png" alt="enter image description here"></p>
+<ul>
+<li><p>样例</p>
+<p>  <img src="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort_b49af5.gif" alt="enter image description here"></p>
+</li>
+</ul>
 ]]></content>
     </entry>
     
