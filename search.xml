@@ -54,6 +54,18 @@
 <li><p>样例</p>
 <p>  <img src="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort_b49af5.gif" alt="enter image description here"></p>
 </li>
+<li><p>步骤</p>
+<ol>
+<li>对数组进行shuffle，保证快速排序的性能</li>
+<li>切分数组(需要满足如下条件)<ul>
+<li>对于某个j, a[j]已经排定</li>
+<li>a[low]到a[j-1]的所有元素都不大于a[j]</li>
+<li>a[j+1]到a[high]的所有元素都不小于a[j]</li>
+</ul>
+</li>
+<li>递归的对数组进行排序</li>
+</ol>
+</li>
 </ul>
 ]]></content>
     </entry>
