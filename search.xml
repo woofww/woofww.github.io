@@ -58,9 +58,9 @@
 <ol>
 <li>对数组进行shuffle，保证快速排序的性能</li>
 <li>切分数组(需要满足如下条件)<ul>
-<li>对于某个j, a[j]已经排定</li>
-<li>a[low]到a[j-1]的所有元素都不大于a[j]</li>
-<li>a[j+1]到a[high]的所有元素都不小于a[j]</li>
+<li>对于某个<code>j</code>, <code>a[j]</code>已经排定</li>
+<li><code>a[low]</code>到<code>a[j-1]</code>的所有元素都不大于<code>a[j]</code></li>
+<li><code>a[j+1]</code>到<code>a[high]</code>的所有元素都不小于<code>a[j]</code></li>
 </ul>
 </li>
 <li>递归的对数组进行排序</li>
