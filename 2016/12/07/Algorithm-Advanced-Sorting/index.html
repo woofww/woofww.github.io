@@ -105,7 +105,8 @@
 <meta property="og:image" content="http://algs4.cs.princeton.edu/23quicksort/images/quicksort-overview.png">
 <meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort_b49af5.gif">
 <meta property="og:image" content="http://algs4.cs.princeton.edu/23quicksort/images/partitioning-overview.png">
-<meta property="og:updated_time" content="2016-12-15T06:27:16.771Z">
+<meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort-3-way_d176ee.gif">
+<meta property="og:updated_time" content="2016-12-15T06:32:30.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-Advanced Sorting">
 <meta name="twitter:description" content="归并排序
@@ -419,28 +420,22 @@
   <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] data, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> i = low, j = high + <span class="number">1</span>;<span class="comment">//扫描指针</span></div><div class="line">    <span class="keyword">int</span> temp;</div><div class="line">    <span class="keyword">int</span> compare = data[low];</div><div class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</div><div class="line">        <span class="comment">//从数组两侧进行扫描</span></div><div class="line">        <span class="keyword">while</span>(data[++i] &lt; compare) <span class="keyword">if</span> (i == high) <span class="keyword">break</span>;<span class="comment">//当左指针大于compare的首元素时候，跳出进行交换</span></div><div class="line">        <span class="keyword">while</span> (compare &lt; data[--j]) <span class="keyword">if</span> (j == low) <span class="keyword">break</span>;<span class="comment">//当右指针小于compare的首元素时候，跳出进行交换</span></div><div class="line">        <span class="keyword">if</span> (i &gt;= j) <span class="keyword">break</span>;<span class="comment">//当左右指针相遇的时候，跳出循环体</span></div><div class="line">        <span class="comment">//元素交换</span></div><div class="line">        temp = data[i];</div><div class="line">        data[i] = data[j];</div><div class="line">        data[j] = temp;</div><div class="line">    &#125;</div><div class="line">    temp = data[low];</div><div class="line">    data[low] = data[j];</div><div class="line">    data[j] = temp;</div><div class="line">    <span class="keyword">return</span> j;</div><div class="line">    <span class="comment">//将首元素和位置[j]的元素进行交换</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="算法改进"><a href="#算法改进" class="headerlink" title="算法改进"></a>算法改进</h3><pre><code>* 改善快速排序性能的简单方法：
-
-    1. 类似于归并排序，对于小数组，插入排序的效率更高一些
-    2. 由于递归的原因，排序方法也会在小数组当中调用自己
-
-* 三取样切分
-    通过使用子数组一部分元素的中位数来对数组进行切分。
-
-* 三向切分(熵最优排序)
-
-    Ex:
-
-    ![enter image description here](https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort-3-way_d176ee.gif)
-    该情况适用于数组当中存在大量重复元素的样例。当切分的元素重复的时候，不需要对其进行排序即可。切分的三部分分别为大于小于等于元素的数组元素
-    * data[i] &lt; compare元素 二者交换 i 和 lt同时增加
-    * data[i] &gt; compare元素 和data[gt]交换 gt减少
-    * data[i] = compare元素 i++
-
-这样的操作能够保证数组元素不变，同时缩小gt-i的值
-
+<h3 id="算法改进"><a href="#算法改进" class="headerlink" title="算法改进"></a>算法改进</h3><h4 id="改善快速排序性能的简单方法："><a href="#改善快速排序性能的简单方法：" class="headerlink" title="改善快速排序性能的简单方法："></a>改善快速排序性能的简单方法：</h4><ul>
+<li>类似于归并排序，对于小数组，插入排序的效率更高一些</li>
+<li>由于递归的原因，排序方法也会在小数组当中调用自己</li>
+</ul>
+<h4 id="三取样切分"><a href="#三取样切分" class="headerlink" title="三取样切分"></a>三取样切分</h4><p>通过使用子数组一部分元素的中位数来对数组进行切分。</p>
+<h4 id="三向切分-熵最优排序"><a href="#三向切分-熵最优排序" class="headerlink" title="三向切分(熵最优排序)"></a>三向切分(熵最优排序)</h4><p>Ex:</p>
+<p><img src="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort-3-way_d176ee.gif" alt="enter image description here"></p>
+<p>该情况适用于数组当中存在大量重复元素的样例。当切分的元素重复的时候，不需要对其进行排序即可。切分的三部分分别为大于小于等于元素的数组元素</p>
+<ul>
+<li>data[i] &lt; compare元素 二者交换 i 和 lt同时增加</li>
+<li>data[i] &gt; compare元素 和data[gt]交换 gt减少</li>
+<li>data[i] = compare元素 i++</li>
+</ul>
+<p>这样的操作能够保证数组元素不变，同时缩小gt-i的值</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">threeWaySort</span><span class="params">(<span class="keyword">int</span>[] data, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> temp;</div><div class="line">    <span class="keyword">if</span> (high &lt;= low) <span class="keyword">return</span>; <span class="comment">//递归结束条件</span></div><div class="line">    <span class="keyword">int</span> lt = low, i = low + <span class="number">1</span>, gt = high; <span class="comment">//扫描指针</span></div><div class="line">    <span class="keyword">int</span> compare = data[low];</div><div class="line">    <span class="keyword">while</span> (i &lt;= gt)&#123;</div><div class="line">        <span class="keyword">if</span> (data[i] &lt; compare)&#123;</div><div class="line">            temp = data[i];</div><div class="line">            data[i] = data[lt];</div><div class="line">            data[lt] = temp;</div><div class="line">            i++;</div><div class="line">            lt++;</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (data[i] &gt; compare)&#123;</div><div class="line">            temp = data[i];</div><div class="line">            data[i] = data[gt];</div><div class="line">            data[gt] = temp;</div><div class="line">            gt--;</div><div class="line">        &#125;<span class="keyword">else</span> i++;</div><div class="line">    &#125;</div><div class="line">    threeWaySort(data, low, lt-<span class="number">1</span>);</div><div class="line">    threeWaySort(data, gt+<span class="number">1</span>, high);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</code></pre>
+
       
     </div>
 
@@ -619,7 +614,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原地归并的抽象方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">原地归并的抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自顶向下归并排序"><span class="nav-number">1.2.2.</span> <span class="nav-text">自顶向下归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化方式"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">优化方式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念-1"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法改进"><span class="nav-number">2.2.</span> <span class="nav-text">算法改进</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">1.</span> <span class="nav-text">归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原地归并的抽象方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">原地归并的抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自顶向下归并排序"><span class="nav-number">1.2.2.</span> <span class="nav-text">自顶向下归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优化方式"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">优化方式</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念-1"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法改进"><span class="nav-number">2.2.</span> <span class="nav-text">算法改进</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#改善快速排序性能的简单方法："><span class="nav-number">2.2.1.</span> <span class="nav-text">改善快速排序性能的简单方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三取样切分"><span class="nav-number">2.2.2.</span> <span class="nav-text">三取样切分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三向切分-熵最优排序"><span class="nav-number">2.2.3.</span> <span class="nav-text">三向切分(熵最优排序)</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
