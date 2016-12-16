@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/quick-sort-3-way_d176ee.gif">
 <meta property="og:image" content="https://assets.toptal.io/assets/front/static/public/blocks/sorting_algorithms/animations/50/random-initial-order/heap-sort_f79bb1.gif">
 <meta property="og:image" content="http://algs4.cs.princeton.edu/24pq/images/heap-representations.png">
-<meta property="og:updated_time" content="2016-12-16T12:58:21.930Z">
+<meta property="og:updated_time" content="2016-12-16T13:05:24.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-Advanced Sorting">
 <meta name="twitter:description" content="归并排序
@@ -455,13 +455,7 @@
 <ul>
 <li><p>堆的构造</p>
 <p>通过对数据从右至左进行不断的sink操作，对于数组中的每一个位置，都能够认为是每个子堆的根节点(也包含树的最底层节点)。对于扫描数组只需要扫描其容量的一半，这样可以跳过大小为1的子堆。</p>
-<p>```java<br>public static void sort(int[] data){<br>  int N = data.length;<br>  for (int i = N/2; i &gt;= 1; i– ) {</p>
-<pre><code>sink(data, i, N);//该部分目的构造有序堆
-</code></pre><p>  }<br>  while (N &gt; 1){</p>
-<pre><code>exchange(data, 1, N--);
-sink(data, 1, N);
-//移出每个堆中的最大元素，完成排序
-</code></pre><p>  }<br>}</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] data)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> N = data.length;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = N/<span class="number">2</span>; i &gt;= <span class="number">1</span>; i-- ) &#123;</div><div class="line">        sink(data, i, N);<span class="comment">//该部分目的构造有序堆</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (N &gt; <span class="number">1</span>)&#123;</div><div class="line">        exchange(data, <span class="number">1</span>, N--);</div><div class="line">        sink(data, <span class="number">1</span>, N);</div><div class="line">        <span class="comment">//移出每个堆中的最大元素，完成排序</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
