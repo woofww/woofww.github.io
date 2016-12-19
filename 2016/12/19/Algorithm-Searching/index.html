@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Data Structure,Algorithm," />
 
 
 
@@ -84,13 +84,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="All tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="Symbol Table (符号表)
+定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm-Searching">
+<meta property="og:url" content="http://yoursite.com/2016/12/19/Algorithm-Searching/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:updated_time" content="2016-11-23T03:08:54.319Z">
+<meta property="og:description" content="Symbol Table (符号表)
+定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找">
+<meta property="og:updated_time" content="2016-12-19T13:05:49.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="All tags">
+<meta name="twitter:title" content="Algorithm-Searching">
+<meta name="twitter:description" content="Symbol Table (符号表)
+定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找">
 
 
 
@@ -108,13 +114,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    标签 | EmptyNode
-  
-</title>
+  <title> Algorithm-Searching | EmptyNode </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -135,7 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,16 +258,143 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 3 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Algorithm-Searching
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-19T19:04:55+08:00" content="2016-12-19">
+              2016-12-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Technique/" itemprop="url" rel="index">
+                    <span itemprop="name">Technique</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Algorithm/" style="font-size: 30px; color: #111">Algorithm</a> <a href="/tags/Data-Structure/" style="font-size: 21px; color: #6f6f6f">Data Structure</a> <a href="/tags/Intellij/" style="font-size: 12px; color: #ccc">Intellij</a>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Symbol-Table-符号表"><a href="#Symbol-Table-符号表" class="headerlink" title="Symbol Table (符号表)"></a>Symbol Table (符号表)</h2><blockquote>
+<p>定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="Base-API"><a href="#Base-API" class="headerlink" title="Base API"></a>Base API</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class SymbolTable&lt;key,value&gt;</span></div><div class="line"><span class="title">SymbolTable</span><span class="params">()</span>                创建ST</div><div class="line"><span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span> 将键值对存入表当中</div><div class="line">Value <span class="title">get</span><span class="params">(Key key)</span>           根据Key查找value</div><div class="line"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(Key key)</span>         从表当中删除key</div><div class="line"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Key key)</span>    键值key在表当中是否存在对应值</div><div class="line"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span>            判断表是否为空</div><div class="line"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span>                   判断表的容量</div><div class="line">Iterable&lt;key&gt; <span class="title">keys</span><span class="params">()</span>         表当中所有键值对的集合</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Data-Structure/" rel="tag">#Data Structure</a>
+          
+            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/07/Algorithm-Advanced-Sorting/" rel="next" title="Algorithm-Advanced Sorting">
+                <i class="fa fa-chevron-left"></i> Algorithm-Advanced Sorting
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -299,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -388,6 +524,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Symbol-Table-符号表"><span class="nav-number">1.</span> <span class="nav-text">Symbol Table (符号表)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Base-API"><span class="nav-number">1.1.</span> <span class="nav-text">Base API</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -484,6 +631,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

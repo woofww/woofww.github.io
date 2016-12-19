@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[Algorithm-Searching]]></title>
+      <url>http://yoursite.com/2016/12/19/Algorithm-Searching/</url>
+      <content type="html"><![CDATA[<h2 id="Symbol-Table-符号表"><a href="#Symbol-Table-符号表" class="headerlink" title="Symbol Table (符号表)"></a>Symbol Table (符号表)</h2><blockquote>
+<p>定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="Base-API"><a href="#Base-API" class="headerlink" title="Base API"></a>Base API</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class SymbolTable&lt;key,value&gt;</span></div><div class="line"><span class="title">SymbolTable</span><span class="params">()</span>                创建ST</div><div class="line"><span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span> 将键值对存入表当中</div><div class="line">Value <span class="title">get</span><span class="params">(Key key)</span>           根据Key查找value</div><div class="line"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(Key key)</span>         从表当中删除key</div><div class="line"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Key key)</span>    键值key在表当中是否存在对应值</div><div class="line"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span>            判断表是否为空</div><div class="line"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span>                   判断表的容量</div><div class="line">Iterable&lt;key&gt; <span class="title">keys</span><span class="params">()</span>         表当中所有键值对的集合</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Algorithm-Advanced Sorting]]></title>
       <url>http://yoursite.com/2016/12/07/Algorithm-Advanced-Sorting/</url>
       <content type="html"><![CDATA[<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><blockquote>
