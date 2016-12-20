@@ -7,10 +7,27 @@
       <title><![CDATA[Algorithm-Searching]]></title>
       <url>http://yoursite.com/2016/12/19/Algorithm-Searching/</url>
       <content type="html"><![CDATA[<h2 id="Symbol-Table-符号表"><a href="#Symbol-Table-符号表" class="headerlink" title="Symbol Table (符号表)"></a>Symbol Table (符号表)</h2><blockquote>
-<p>定义： 符号表是一种可以存储key-value的数据结构，它可以进行两种操作，put(将键值对存入符号表)和get操作(根据给定的key查找value)，就相当于字典查询一样，需要通过索引进行对应查找</p>
+<p>定义： 符号表是一种可以存储<code>key-value</code>的数据结构，它可以进行两种操作，<code>put</code>(将键值对存入符号表)和<code>get</code>操作(根据给定的<code>key</code>查找<code>value</code>)，就相当于字典查询一样，需要通过索引进行对应查找</p>
 </blockquote>
 <a id="more"></a>
 <h3 id="Base-API"><a href="#Base-API" class="headerlink" title="Base API"></a>Base API</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class SymbolTable&lt;key,value&gt;</span></div><div class="line"><span class="title">SymbolTable</span><span class="params">()</span>                创建ST</div><div class="line"><span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span> 将键值对存入表当中</div><div class="line">Value <span class="title">get</span><span class="params">(Key key)</span>           根据Key查找value</div><div class="line"><span class="keyword">void</span> <span class="title">delete</span><span class="params">(Key key)</span>         从表当中删除key</div><div class="line"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Key key)</span>    键值key在表当中是否存在对应值</div><div class="line"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span>            判断表是否为空</div><div class="line"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span>                   判断表的容量</div><div class="line">Iterable&lt;key&gt; <span class="title">keys</span><span class="params">()</span>         表当中所有键值对的集合</div></pre></td></tr></table></figure>
+<h3 id="基于无序链表的顺序查找"><a href="#基于无序链表的顺序查找" class="headerlink" title="基于无序链表的顺序查找"></a>基于无序链表的顺序查找</h3><blockquote>
+<p>将链表应用于符号表是通过每个节点存储<code>key-value</code>对，同时通过<code>get()</code>方法遍历链表，当被查找的<code>key</code>和结点所对应的<code>key</code>完全一致时，则返回对应结点的数值，否则返回<code>null</code>。<code>put()</code>方法的实现同样是通过遍历链表，当被查找的<code>key</code>和结点当中存储的完全一致是，则将第二个参数<code>value</code>的值更新结点位置的数值。</p>
+</blockquote>
+<ul>
+<li><p>样例</p>
+<p>  <img src="http://algs4.cs.princeton.edu/31elementary/images/sequential-search.png" alt="enter image description here"></p>
+</li>
+</ul>
+<h3 id="基于有序数组的二分查找"><a href="#基于有序数组的二分查找" class="headerlink" title="基于有序数组的二分查找"></a>基于有序数组的二分查找</h3><blockquote>
+<p>通过应用一对平行数组，利用其中一个存储<code>key</code>一个存储<code>value</code>，从而实现高效的索引以及其他操作。<br>这部分的核心是实现<code>rank()</code>方法，该方法可以返回<code>table</code>当中小于给定<code>value</code>的数量，对于<code>get()</code>方法，当给定的<code>key</code>存在于表当中的时候，<code>rank()</code>方法便能够通知该<code>key</code>的位置。对于<code>put()</code>方法，<code>rank</code>方法可以确定<code>value</code>的更新位置。</p>
+</blockquote>
+<ul>
+<li><p>样例</p>
+<p>  <img src="http://algs4.cs.princeton.edu/31elementary/images/binary-search.png" alt="enter image description here"></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rank</span><span class="params">(Key key, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span>&#123;</div><div class="line">    to be update...</div><div class="line">&#125;</div><div class="line"><span class="comment">//迭代</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rank</span><span class="params">(Key key)</span></span>&#123;</div><div class="line">    to be update...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
