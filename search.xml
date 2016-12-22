@@ -31,7 +31,7 @@
 <p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-insert.png" alt=""></p>
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>Binary Search的算法的查找和插入运行时间在平均情况下都可以达到O(logn)。当时这个时间复杂度在很大程度上会受到树的形状的影响，同时树的形状又取决于键值被插入的先后顺序。</p>
 <p>最好的情况系啊，一棵含有N个结点的树是完全平衡的，每条空连接到其根结点的距离都为logN。但是在最坏的情况下，搜索的路径上可能含有N个节点</p>
-<p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-typical.png" alt=""> <img src="http://algs4.cs.princeton.edu/32bst/images/bst-worst.png" alt=""></p>
+<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320222706.jpg" alt=""> </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySerach</span></span>&#123;</div><div class="line">    to be update</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
