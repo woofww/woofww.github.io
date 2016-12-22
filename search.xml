@@ -29,6 +29,10 @@
 <p><img src="http://ww4.sinaimg.cn/large/006tNbRwgw1fayquslvw0j30f20avjte.jpg" alt=""></p>
 <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>当查找一个不存在于树当中的节点并且查找结束于一条空链接的时候，需要将链接指向一个含有被查找的键的新结点的位置。简而言之，当树为空，但会含有被查找键值对的新节点；当被查找的键小于根节点的键时，在左子树插入，否则在右子树插入。</p>
 <p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-insert.png" alt=""></p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>Binary Search的算法的查找和插入运行时间在平均情况下都可以达到O(logn)。当时这个时间复杂度在很大程度上会受到树的形状的影响，同时树的形状又取决于键值被插入的先后顺序。</p>
+<p>最好的情况系啊，一棵含有N个结点的树是完全平衡的，每条空连接到其根结点的距离都为logN。但是在最坏的情况下，搜索的路径上可能含有N个节点</p>
+<p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-typical.png" alt=""> <img src="http://algs4.cs.princeton.edu/32bst/images/bst-worst.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySerach</span></span>&#123;</div><div class="line">    to be update</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
