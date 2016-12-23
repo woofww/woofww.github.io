@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[Design Pattern-Singleton]]></title>
+      <url>http://yoursite.com/2016/12/22/Design%20Pattern-Singleton/</url>
+      <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Algorithm-Searching]]></title>
       <url>http://yoursite.com/2016/12/19/Algorithm-Searching/</url>
       <content type="html"><![CDATA[<h2 id="Symbol-Table-符号表"><a href="#Symbol-Table-符号表" class="headerlink" title="Symbol Table (符号表)"></a>Symbol Table (符号表)</h2><blockquote>
@@ -31,9 +37,37 @@
 <p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-insert.png" alt=""></p>
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>Binary Search的算法的查找和插入运行时间在平均情况下都可以达到O(logn)。当时这个时间复杂度在很大程度上会受到树的形状的影响，同时树的形状又取决于键值被插入的先后顺序。</p>
 <p>最好的情况系啊，一棵含有N个结点的树是完全平衡的，每条空连接到其根结点的距离都为logN。但是在最坏的情况下，搜索的路径上可能含有N个节点</p>
-<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320222706.jpg" alt=""> </p>
+<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320222706.jpg" alt=""></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinarySerach</span></span>&#123;</div><div class="line">    to be update</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
+<h2 id="Balanced-Search-Tree-平衡查找树"><a href="#Balanced-Search-Tree-平衡查找树" class="headerlink" title="Balanced Search Tree (平衡查找树)"></a>Balanced Search Tree (平衡查找树)</h2><h3 id="2-3查找树"><a href="#2-3查找树" class="headerlink" title="2-3查找树"></a>2-3查找树</h3><blockquote>
+<p>前面提到的几个搜索算法在最坏的情况下的性能依然不能令人满意。因此非常需要一个算法能够在查找和插入过程中都能保证很好的性能。这部分介绍的平衡搜索树能很好的解决这个问题。</p>
+<p>在理想情况下，平衡查找树都能保证运行时间是对数级别的。对于一个含有N个节点的树当中，树的高度可以保证为lgN。这样便可以保证查找可以在lgN次内结束。</p>
+</blockquote>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ol>
+<li><p>2-3树当中的2结点，含有一个<code>key</code>以及两条链接，左链接对应的<code>key</code>都小于父结点，右链接对应的<code>key</code>都大于父结点。</p>
+</li>
+<li><p>2-3树当中的3结点，含有两个<code>key</code>以及三条链接，左链接<br>对应的<code>key</code>都大于该结点，右链接对应的<code>key</code>都小于该结点，，中间链接对应的结点处于该结点两个<code>key</code>的中间。</p>
+</li>
+</ol>
+<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320225636.jpg" alt=""></p>
+<h4 id="查找-1"><a href="#查找-1" class="headerlink" title="查找"></a>查找</h4><p>判断<code>key</code>是否在2-3树当中，先将<code>key</code>和结点的<code>key</code>进行比较，如果相等则查找成功。如果未找到，则继续根据情况在子链接当中递归的进行查找。如果最终为空连接，查找未命中。</p>
+<p><img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-search.png" alt=""></p>
+<h4 id="插入-1"><a href="#插入-1" class="headerlink" title="插入"></a>插入</h4><ul>
+<li><p>向2-结点当中插入新键</p>
+<p>  当插入操作结束于一个2-结点的时候，直接将2-结点替换为一个3-结点，便可以让树继续保持平衡。</p>
+<p>  <img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-insert2.png" alt=""></p>
+</li>
+<li><p>向只含有3-结点的树插入新键</p>
+<p>  当一棵树当中只含有3-结点的时候，先临时将新键存入当前结点，构成一个4-结点。在这个情况下，很容易将其转化为一棵由3个2-结点组成的2-3树。</p>
+<p>  <img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-insert3a.png" alt=""></p>
+</li>
+<li><p>向父结点为2-结点的3-结点插入新键</p>
+<p>  对于此种情况，可以先构造一个4-结点，下一步操作并不是为中键创建新结点，而是将中键上移到父结点的位置，这样便使得空连接到达根节点的距离依然是相同的</p>
+<p>  <img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-insert3b.png" alt=""></p>
+<p>  类似的对于父结点为3-结点的三结点插入的时候，需要将中键不断上移，直至父节点不需要继续分解。</p>
+</li>
+</ul>
+<h3 id="红黑二叉查找树"><a href="#红黑二叉查找树" class="headerlink" title="红黑二叉查找树"></a>红黑二叉查找树</h3>]]></content>
     </entry>
     
     <entry>
