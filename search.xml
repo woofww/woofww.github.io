@@ -6,7 +6,31 @@
     <entry>
       <title><![CDATA[Design Pattern-Singleton]]></title>
       <url>http://yoursite.com/2016/12/22/Design%20Pattern-Singleton/</url>
-      <content type="html"><![CDATA[<a id="more"></a>
+      <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在软件工程当中，设计模式 (Design Pattern) 是对软件设计当中普遍存在的各种问题，所得出的解决方案。设计模式并不是直接用来完成代码的编写，而是描述在不同的状况下，要如何解决问题的一种方案。<br><a id="more"></a><br>面向对象设计模式通常以类别或者对象来描述其中的关系和相互作用， 但不涉及用来完成应用程序的特定类别或者对象。设计模式能使不稳定依赖于相对稳定，具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。本系列文章将主要着重于介绍Android开发中几个常用的设计模式进行介绍和探讨。—[Wikipedia] (<a href="https://en.wikipedia.org/wiki/Software_design_pattern" target="_blank" rel="external">https://en.wikipedia.org/wiki/Software_design_pattern</a>)</p>
+<h2 id="单例模式-Singleton"><a href="#单例模式-Singleton" class="headerlink" title="单例模式 (Singleton)"></a>单例模式 (Singleton)</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>在应用单例模式的时候，单例对象的类必须保证只有一个实例存在。 在很多情况下，整个系统只需要拥有一个全局对象，这样更有利于对系统整体的行为进行协调。比如在服务器程序当中，该服务器的配置信息存放在一个文件当中，这些服务器的配置便由一个单例对象进行统一的读取，然后服务器中的其他对象在通过这个单例对象进行配置信息的获取，这样便简化了配置管理的环境。</p>
+</blockquote>
+<ul>
+<li><img src="http://s9.sinaimg.cn/mw690/674f4fc6gddd1e4334838&amp;690" alt=""></li>
+</ul>
+<blockquote>
+<p>特点:</p>
+<p>A:单例模式只能存在一个实例；</p>
+<p>B:单利模式类必须自己创建自己的唯一实例；</p>
+<p>C:单利模式类必须给其他所有对象提供这个实例</p>
+</blockquote>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
+<li><p>懒汉单例模式</p>
+<p> 第一次对单例对象进行实例化的时候，当处于并发环境的时候，可能会出现多个单例本身对象，这样就是线程不安全的。</p>
+</li>
+<li><p>饿汉单例模式</p>
+<p> 在单例类进行初始化的时候，已经自行实例化一个静态对象，本身便是线程安全的。</p>
+</li>
+<li><p>登记单例模式</p>
+<p> 通过一个专门的类对各个单例模式的单一实例进行管理和维护</p>
+</li>
+</ol>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="懒汉单例模式"><a href="#懒汉单例模式" class="headerlink" title="懒汉单例模式"></a>懒汉单例模式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">/*当单例为空的时候进行创建，否则直接返回，保证唯一性*/</span></div><div class="line">        <span class="keyword">if</span>(singleton == <span class="keyword">null</span>)&#123;</div><div class="line">            singleton = <span class="keyword">new</span> Singleton();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> singleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*线程安全的懒汉单例模式*/</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton singleton = <span class="keyword">null</span>;</div><div class="line">    <span class="function">publci <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getSingleton</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span> (singleton == <span class="keyword">null</span>) &#123;</div><div class="line">            singleton = <span class="keyword">new</span> Singleton();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> singleton;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
