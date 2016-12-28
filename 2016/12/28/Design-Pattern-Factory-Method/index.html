@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm," />
+  <meta name="keywords" content="Design Pattern," />
 
 
 
@@ -84,27 +84,16 @@
 
 
 
-<meta name="description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
+<meta name="description" content="工厂方法(Factory Method)To be updated……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm-Union Find">
-<meta property="og:url" content="http://yoursite.com/2016/11/12/Union-Find-Algorithm/index.html">
+<meta property="og:title" content="Design Pattern-Factory Method">
+<meta property="og:url" content="http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
-<meta property="og:image" content="http://obpbs8a3y.bkt.clouddn.com/1.jpg">
-<meta property="og:image" content="http://img.blog.csdn.net/20130901114328078">
-<meta property="og:image" content="http://i2.piimg.com/567571/38bfecc955fdf85c.jpg">
-<meta property="og:image" content="http://img.blog.csdn.net/20140531203442953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20140531203442953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:image" content="http://img.blog.csdn.net/20130901134321640">
-<meta property="og:image" content="http://img.blog.csdn.net/20140602174057171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
-<meta property="og:updated_time" content="2016-12-08T12:10:59.358Z">
+<meta property="og:description" content="工厂方法(Factory Method)To be updated……">
+<meta property="og:updated_time" content="2016-12-28T11:51:01.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm-Union Find">
-<meta name="twitter:description" content="Princeton - Algorithm1st week：Union-Find
-问题描述有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图">
-<meta name="twitter:image" content="http://obpbs8a3y.bkt.clouddn.com/1.jpg">
+<meta name="twitter:title" content="Design Pattern-Factory Method">
+<meta name="twitter:description" content="工厂方法(Factory Method)To be updated……">
 
 
 
@@ -122,7 +111,7 @@
   };
 </script>
 
-  <title> Algorithm-Union Find | EmptyNode </title>
+  <title> Design Pattern-Factory Method | EmptyNode </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +274,7 @@
             
             
               
-                Algorithm-Union Find
+                Design Pattern-Factory Method
               
             
           </h1>
@@ -297,8 +286,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-12T23:57:22+08:00" content="2016-11-12">
-              2016-11-12
+            <time itemprop="dateCreated" datetime="2016-12-28T19:49:41+08:00" content="2016-12-28">
+              2016-12-28
             </time>
           </span>
 
@@ -344,53 +333,7 @@
       
 
       
-        <h2 id="Princeton-Algorithm"><a href="#Princeton-Algorithm" class="headerlink" title="Princeton - Algorithm"></a>Princeton - Algorithm</h2><p>1st week：Union-Find</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br><a id="more"></a><br><img src="http://obpbs8a3y.bkt.clouddn.com/1.jpg" alt="enter image description here"><br><img src="http://img.blog.csdn.net/20130901114328078" alt="enter image description here"></p>
-<p>从上图中可以看出，0, 1, 2, 5, 6, 7 中的任意两个元素都是相连的，同样 3, 4, 8, 9 中任意两个元素也是互连的，但是第一个集合和第二个集合的元素却是无法连通的。</p>
-<p>实际操作中可用于在一个庞大的网路环境下，如何迅速判断某两个点是否相连，如下图：</p>
-<p><img src="http://i2.piimg.com/567571/38bfecc955fdf85c.jpg" alt="enter image description here"></p>
-<h3 id="有效算法的开发步骤"><a href="#有效算法的开发步骤" class="headerlink" title="有效算法的开发步骤"></a>有效算法的开发步骤</h3><ol>
-<li>构建需求模型</li>
-<li>寻找所需算法</li>
-<li>运行算法检测速度和内存是否符合要求</li>
-<li>效率差或者达不到要求，找出问题的原因</li>
-<li>寻求解决办法，循环上述步骤直到满意为止</li>
-</ol>
-<h3 id="首先确认Union和Find操作应该满足怎样的条件："><a href="#首先确认Union和Find操作应该满足怎样的条件：" class="headerlink" title="首先确认Union和Find操作应该满足怎样的条件："></a>首先确认Union和Find操作应该满足怎样的条件：</h3><p>find操作：确认两个对象是否连接：<br>自反性：P连接到Q<br>对称性：P连接到Q，则 Q连接到P<br>传递性：P连接到Q，Q连接到R，则P也连接到R</p>
-<p>union操作：连接在一起的对象，我们统称为一个连接集合，执行一次union操作就相当于将两个对象所在的集合连接到一起，组成一个新的集合。新集合中的任意两个成员也应该都处于连接状态。</p>
-<h3 id="Connected-Component"><a href="#Connected-Component" class="headerlink" title="Connected Component"></a>Connected Component</h3><p>Concept: 相连的节点所构成的集合</p>
-<p><img src="http://img.blog.csdn.net/20140531203442953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
-<p><img src="http://img.blog.csdn.net/20140531203442953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>并查集提供了两种操作：</p>
-<ol>
-<li>查找操作(find)：检测两个节点是否相连</li>
-<li>合并操作(Union): 将两节点进行链接</li>
-</ol>
-<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>并查集算法需要实现如下目标：</p>
-<ol>
-<li>查找对象的数量N可以非常大</li>
-<li>操作的次数M可以非常大</li>
-<li>Find和Union操作可以随意调用</li>
-</ol>
-<h2 id="Quick-Find"><a href="#Quick-Find" class="headerlink" title="Quick Find"></a>Quick Find</h2><p>数据结构<br>假设有N个节点，该算法的数据结构为一个包含N个整数的数组id[]</p>
-<h3 id="Find操作"><a href="#Find操作" class="headerlink" title="Find操作"></a>Find操作</h3><p>判断p q两个节点是否相连，通过判断id[p]和id[q]对应的数值是否一致</p>
-<h3 id="Union操作"><a href="#Union操作" class="headerlink" title="Union操作"></a>Union操作</h3><p>将两节点合作是通过将被合并的节点q的id值设为节点p的id值</p>
-<p>但是合并操作的缺点是在进行Union操作的时候，需要遍历整个数组，因此算法开销比较大</p>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>每一次合并的复杂度为N，当合并次数非常大的时候，趋近于N，运算的复杂度则为N^2,因此该算法不适合较大规模运算。</p>
-<p>查找操作的复杂度为1.</p>
-<h2 id="Quick-Union-Lazy-Approach"><a href="#Quick-Union-Lazy-Approach" class="headerlink" title="Quick Union(Lazy Approach)"></a>Quick Union(Lazy Approach)</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ol>
-<li>整型数组id[],大小为N</li>
-<li>Interpretation: 数组的每个元素id[i]指的是i的上一级为id[i]</li>
-<li>i的根节点 id[id[id[…id[]…]]]</li>
-</ol>
-<h3 id="Find操作-1"><a href="#Find操作-1" class="headerlink" title="Find操作"></a>Find操作</h3><p>如果P和Q两个值对应相同的根节点，则为找到</p>
-<h3 id="Union操作-1"><a href="#Union操作-1" class="headerlink" title="Union操作"></a>Union操作</h3><p>如果需要将p q进行连接，则需要将二者对应的根节点数设为相同值</p>
-<p><img src="http://img.blog.csdn.net/20130901134321640" alt="enter image description here"></p>
-<h3 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h3><p>在最坏的情况下，查找操作的复杂度仍将达到N</p>
-<h2 id="Quick-Union的优化"><a href="#Quick-Union的优化" class="headerlink" title="Quick Union的优化"></a>Quick Union的优化</h2><p>通过每个节点增加quality的概念，使得quality小的component位于大的component之下，从而避免了树形结构过高的问题。</p>
-<p>如下图展示了树形结构深度优化后的效果<br><img src="http://img.blog.csdn.net/20140602174057171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY2FpcGVpY2hhbzI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="enter image description here"></p>
-<h3 id="复杂度-2"><a href="#复杂度-2" class="headerlink" title="复杂度"></a>复杂度</h3><p>合并操作的最坏复杂度为lgN,查询操作的最坏复杂度为lgN</p>
-<h3 id="算法优化"><a href="#算法优化" class="headerlink" title="算法优化"></a>算法优化</h3><p>在查找根节点时，将路径上的所有节点进行路径压缩，理论上得到的find操作的复杂度为1.</p>
+        <h2 id="工厂方法-Factory-Method"><a href="#工厂方法-Factory-Method" class="headerlink" title="工厂方法(Factory Method)"></a>工厂方法(Factory Method)</h2><h3 id="To-be-updated……"><a href="#To-be-updated……" class="headerlink" title="To be updated……"></a>To be updated……</h3><a id="more"></a>
 
       
     </div>
@@ -412,7 +355,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
+            <a href="/tags/Design-Pattern/" rel="tag">#Design Pattern</a>
           
         </div>
       
@@ -421,17 +364,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/17/HotKey of Intellij IDEA/" rel="next" title="HotKey of Intellij IDEA">
-                <i class="fa fa-chevron-left"></i> HotKey of Intellij IDEA
+              <a href="/2016/12/22/Design Pattern-Singleton/" rel="next" title="Design Pattern-Singleton">
+                <i class="fa fa-chevron-left"></i> Design Pattern-Singleton
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/24/Data Structure-Stack/" rel="prev" title="Data Structure-Stack">
-                Data Structure-Stack <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -583,7 +522,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Princeton-Algorithm"><span class="nav-number">1.</span> <span class="nav-text">Princeton - Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">2.</span> <span class="nav-text">问题描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有效算法的开发步骤"><span class="nav-number">2.1.</span> <span class="nav-text">有效算法的开发步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首先确认Union和Find操作应该满足怎样的条件："><span class="nav-number">2.2.</span> <span class="nav-text">首先确认Union和Find操作应该满足怎样的条件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connected-Component"><span class="nav-number">2.3.</span> <span class="nav-text">Connected Component</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作"><span class="nav-number">2.4.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标"><span class="nav-number">2.5.</span> <span class="nav-text">目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Find"><span class="nav-number">3.</span> <span class="nav-text">Quick Find</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Find操作"><span class="nav-number">3.1.</span> <span class="nav-text">Find操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Union操作"><span class="nav-number">3.2.</span> <span class="nav-text">Union操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度"><span class="nav-number">3.3.</span> <span class="nav-text">复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union-Lazy-Approach"><span class="nav-number">4.</span> <span class="nav-text">Quick Union(Lazy Approach)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">4.1.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Find操作-1"><span class="nav-number">4.2.</span> <span class="nav-text">Find操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Union操作-1"><span class="nav-number">4.3.</span> <span class="nav-text">Union操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度-1"><span class="nav-number">4.4.</span> <span class="nav-text">复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Union的优化"><span class="nav-number">5.</span> <span class="nav-text">Quick Union的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度-2"><span class="nav-number">5.1.</span> <span class="nav-text">复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法优化"><span class="nav-number">5.2.</span> <span class="nav-text">算法优化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂方法-Factory-Method"><span class="nav-number">1.</span> <span class="nav-text">工厂方法(Factory Method)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#To-be-updated……"><span class="nav-number">1.1.</span> <span class="nav-text">To be updated……</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
