@@ -7,9 +7,9 @@
       <title><![CDATA[Design Pattern-Factory Method]]></title>
       <url>http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/</url>
       <content type="html"><![CDATA[<h2 id="工厂方法-Factory-Method"><a href="#工厂方法-Factory-Method" class="headerlink" title="工厂方法(Factory Method)"></a>工厂方法(Factory Method)</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
-<p>一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁。<a href="https://en.wikipedia.org/wiki/Factory_method_pattern" target="_blank" rel="external">—Wikipedia</a></p>
+<p>一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁。<a href="https://en.wikipedia.org/wiki/Factory_method_pattern" target="_blank" rel="external">—Wikipedia</a><br><a id="more"></a></p>
 </blockquote>
-<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fb7z27kettj30rs0dw3zw.jpg" alt=""><br><a id="more"></a></p>
+<p><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fb7z27kettj30rs0dw3zw.jpg" alt=""></p>
 ]]></content>
     </entry>
     
