@@ -1,1558 +1,337 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="zh-Hans">
 
-
-
-  
-
-
-<html class="theme-next mist use-motion">
+<!-- Head tag -->
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <!--Description-->
     
+
+    <!--Author-->
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+        <meta name="author" content="Chang Wang">
     
+
+    <!--Open Graph Title-->
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+        <meta property="og:title" content="EmptyNode"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="EmptyNode"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>EmptyNode</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
 
 
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="EmptyNode">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="EmptyNode">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EmptyNode">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: '博主'
-    }
-  };
-</script>
-
-  <title> EmptyNode </title>
+    <!-- favicon -->
+    
+	
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
+<body>
 
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
 
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">EmptyNode</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="#" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
-</div>
-
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-  
+    <!-- /.container -->
 </nav>
 
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/28/Design-Pattern-Factory-Method/" itemprop="url">
-                  Design Pattern-Factory Method
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-28T19:49:41+08:00" content="2016-12-28">
-              2016-12-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="工厂方法-Factory-Method"><a href="#工厂方法-Factory-Method" class="headerlink" title="工厂方法(Factory Method)"></a>工厂方法(Factory Method)</h2><h3 id="To-be-updated……"><a href="#To-be-updated……" class="headerlink" title="To be updated……"></a>To be updated……</h3>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/28/Design-Pattern-Factory-Method/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/22/Design Pattern-Singleton/" itemprop="url">
-                  Design Pattern-Singleton
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-22T20:10:40+08:00" content="2016-12-22">
-              2016-12-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在软件工程当中，设计模式 (Design Pattern) 是对软件设计当中普遍存在的各种问题，所得出的解决方案。设计模式并不是直接用来完成代码的编写，而是描述在不同的状况下，要如何解决问题的一种方案。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/22/Design Pattern-Singleton/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/19/Algorithm-Searching/" itemprop="url">
-                  Algorithm-Searching
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-19T19:04:55+08:00" content="2016-12-19">
-              2016-12-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Symbol-Table-符号表"><a href="#Symbol-Table-符号表" class="headerlink" title="Symbol Table (符号表)"></a>Symbol Table (符号表)</h2><blockquote>
-<p>定义： 符号表是一种可以存储<code>key-value</code>的数据结构，它可以进行两种操作，<code>put</code>(将键值对存入符号表)和<code>get</code>操作(根据给定的<code>key</code>查找<code>value</code>)，就相当于字典查询一样，需要通过索引进行对应查找</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/19/Algorithm-Searching/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/07/Algorithm-Advanced-Sorting/" itemprop="url">
-                  Algorithm-Advanced Sorting
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-07T21:30:31+08:00" content="2016-12-07">
-              2016-12-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><blockquote>
-<p>复杂度(nlogn)</p>
-</blockquote>
-<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
-<p>对于归并的概念，简而言之就是分治，对于独立的部分单独地进行排序然后再将排序完成的子数组进行合并，最终完成全部排序。但是归并排序由于需要额外数组，所以空间复杂度也比较高。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/07/Algorithm-Advanced-Sorting/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/28/Algorithm-Sorting/" itemprop="url">
-                  Algorithm-Elementary Sorting
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-28T21:26:25+08:00" content="2016-11-28">
-              2016-11-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>排序算法的目的是将数组元素的主键依照某种方式进行排序。排序后索引较大的主键大于或等于索引较小的主键。</p>
-<p>在java当中，元素通常都是对象，对主键的抽象描述是通过一种内部构建的机制来完成的(java中的Comparable接口)</p>
-<h3 id="比较函数的性质"><a href="#比较函数的性质" class="headerlink" title="比较函数的性质"></a>比较函数的性质</h3><p>比较函数需要满足如下性质才能是的排序函数正常执行：</p>
-<ol>
-<li>反对称性：a &lt;= b且b &lt;= a推出a = b</li>
-<li>传递性：a &lt;= b且b &lt;= c推出a &lt;= c</li>
-<li>整体性：存在a &lt;= b或者b &lt;= a或者二者同时存在</li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/28/Algorithm-Sorting/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/24/Data Structure-Stack/" itemprop="url">
-                  Data Structure-Stack
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-24T22:40:09+08:00" content="2016-11-24">
-              2016-11-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Data-Structure-Princeton-Algorithm"><a href="#Data-Structure-Princeton-Algorithm" class="headerlink" title="Data Structure-Princeton Algorithm"></a>Data Structure-Princeton Algorithm</h2><h3 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 Stack"></a>栈 Stack</h3><h4 id="Basic-API-of-Stack"><a href="#Basic-API-of-Stack" class="headerlink" title="Basic API of Stack"></a>Basic API of Stack</h4>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/24/Data Structure-Stack/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/12/Union-Find-Algorithm/" itemprop="url">
-                  Algorithm-Union Find
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-12T23:57:22+08:00" content="2016-11-12">
-              2016-11-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Technique/" itemprop="url" rel="index">
-                    <span itemprop="name">Technique</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Princeton-Algorithm"><a href="#Princeton-Algorithm" class="headerlink" title="Princeton - Algorithm"></a>Princeton - Algorithm</h2><p>1st week：Union-Find</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/11/12/Union-Find-Algorithm/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/17/HotKey of Intellij IDEA/" itemprop="url">
-                  HotKey of Intellij IDEA
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-17T14:06:11+08:00" content="2016-01-17">
-              2016-01-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Tips/" itemprop="url" rel="index">
-                    <span itemprop="name">Tips</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><em>Intellij IDEA作为一款能力非常强大的集成开发工具，为日常的程序开发带来了很大的便利，同时内部自带的快捷键也极大地提升了开发效率，本文将主要对Intellij IDEA中的常用快捷键进行总结</em><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/17/HotKey of Intellij IDEA/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Chang Wang" />
-          <p class="site-author-name" itemprop="name">Chang Wang</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>EmptyNode</h1>
+                    <hr class="small">
+                    <span class="subheading"></span>
+                </div>
             </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/woofww" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/2195801810/home?wvr=5&lf=reg" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://500px.com/woofwang" target="_blank" title="500px">
-                  
-                    <i class="fa fa-fw fa-500px"></i>
-                  
-                  500px
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.instagram.com/woof_ww" target="_blank" title="Instagram">
-                  
-                    <i class="fa fa-fw fa-instagram"></i>
-                  
-                  Instagram
-                </a>
-              </span>
-            
-          
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-
     </div>
-  </aside>
+</header>
 
-
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                <div class="post-preview">
+    <a href="/2016/12/28/Design-Pattern-Factory-Method/">
+        <h2 class="post-title">
+            Design Pattern-Factory Method
+        </h2>
         
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Chang Wang</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://woofww.github.io">Woof</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
         
-
+        2016-12-28
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/12/22/Design Pattern-Singleton/">
+        <h2 class="post-title">
+            Design Pattern-Singleton
+        </h2>
         
-      </div>
-    </footer>
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-12-22
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/12/19/Algorithm-Searching/">
+        <h2 class="post-title">
+            Algorithm-Searching
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-12-19
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/12/07/Algorithm-Advanced-Sorting/">
+        <h2 class="post-title">
+            Algorithm-Advanced Sorting
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-12-07
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/11/28/Algorithm-Sorting/">
+        <h2 class="post-title">
+            Algorithm-Elementary Sorting
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-11-28
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/11/24/Data Structure-Stack/">
+        <h2 class="post-title">
+            Data Structure-Stack
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-11-24
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/11/12/Union-Find-Algorithm/">
+        <h2 class="post-title">
+            Algorithm-Union Find
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-11-12
+    </p>
+</div>
+<hr>
+            
+                <div class="post-preview">
+    <a href="/2016/01/17/HotKey of Intellij IDEA/">
+        <h2 class="post-title">
+            HotKey of Intellij IDEA
+        </h2>
+        
+    </a>
+    <p class="post-meta">
+        <!-- Date and Author -->
+        
+        2016-01-17
+    </p>
+</div>
+<hr>
+            
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+            <ul class="pager">
+    
+    
+</ul>
+        </div>
     </div>
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+</div>
 
 
 
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2016 Chang Wang<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
 
 
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-  
-  
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-       search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
-
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-    'use strict';
-    $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-            // get the contents from search data
-            isfetched = true;
-            $('.popup').detach().appendTo('.header-inner');
-            var datas = $( "entry", xmlResponse ).map(function() {
-                return {
-                    title: $( "title", this ).text(),
-                    content: $("content",this).text(),
-                    url: $( "url" , this).text()
-                };
-            }).get();
-            var $input = document.getElementById(search_id);
-            var $resultContent = document.getElementById(content_id);
-            $input.addEventListener('input', function(){
-                var matchcounts = 0;
-                var str='<ul class=\"search-result-list\">';                
-                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                $resultContent.innerHTML = "";
-                if (this.value.trim().length > 1) {
-                // perform local searching
-                datas.forEach(function(data) {
-                    var isMatch = true;
-                    var content_index = [];
-                    var data_title = data.title.trim().toLowerCase();
-                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                    var data_url = data.url;
-                    var index_title = -1;
-                    var index_content = -1;
-                    var first_occur = -1;
-                    // only match artiles with not empty titles and contents
-                    if(data_title != '' && data_content != '') {
-                        keywords.forEach(function(keyword, i) {
-                            index_title = data_title.indexOf(keyword);
-                            index_content = data_content.indexOf(keyword);
-                            if( index_title < 0 && index_content < 0 ){
-                                isMatch = false;
-                            } else {
-                                if (index_content < 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
-                                    first_occur = index_content;
-                                }
-                            }
-                        });
-                    }
-                    // show search results
-                    if (isMatch) {
-                        matchcounts += 1;
-                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                        var content = data.content.trim().replace(/<[^>]+>/g,"");
-                        if (first_occur >= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-                            if(start < 0){
-                                start = 0;
-                            }
-                            if(start == 0){
-                                end = 50;
-                            }
-                            if(end > content.length){
-                                end = content.length;
-                            }
-                            var match_content = content.substring(start, end);
-                            // highlight all keywords
-                            keywords.forEach(function(keyword){
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                            });
-                            
-                            str += "<p class=\"search-result\">" + match_content +"...</p>"
-                        }
-                        str += "</li>";
-                    }
-                })};
-                str += "</ul>";
-                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-                $resultContent.innerHTML = str;
-            });
-            proceedsearch();
-        }
-    });}
-
-    // handle and trigger popup window;
-    $('.popup-trigger').mousedown(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-
-    });
-
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
-
-  
-
-  
-
-  
 
 </body>
+
 </html>
