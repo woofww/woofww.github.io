@@ -84,20 +84,20 @@
 
 
 
-<meta name="description" content="工厂模式 (Factory Pattern)概念
-一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对">
+<meta name="description" content="概念
+一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Design Pattern-Factory Method">
+<meta property="og:title" content="Design Pattern-Factory Pattern">
 <meta property="og:url" content="http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:description" content="工厂模式 (Factory Pattern)概念
-一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对">
+<meta property="og:description" content="概念
+一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcgw1fb7z27kettj30rs0dw3zw.jpg">
-<meta property="og:updated_time" content="2016-12-30T08:28:51.573Z">
+<meta property="og:updated_time" content="2016-12-30T08:32:11.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Design Pattern-Factory Method">
-<meta name="twitter:description" content="工厂模式 (Factory Pattern)概念
-一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对">
+<meta name="twitter:title" content="Design Pattern-Factory Pattern">
+<meta name="twitter:description" content="概念
+一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁">
 <meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tKfTcgw1fb7z27kettj30rs0dw3zw.jpg">
 
 
@@ -116,7 +116,7 @@
   };
 </script>
 
-  <title> Design Pattern-Factory Method | EmptyNode </title>
+  <title> Design Pattern-Factory Pattern | EmptyNode </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -279,7 +279,7 @@
             
             
               
-                Design Pattern-Factory Method
+                Design Pattern-Factory Pattern
               
             
           </h1>
@@ -338,9 +338,10 @@
       
 
       
-        <h2 id="工厂模式-Factory-Pattern"><a href="#工厂模式-Factory-Pattern" class="headerlink" title="工厂模式 (Factory Pattern)"></a>工厂模式 (Factory Pattern)</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
-<p>一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁。<a href="https://en.wikipedia.org/wiki/Factory_method_pattern" target="_blank" rel="external">—Wikipedia</a><br><a id="more"></a></p>
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>一种实现了“工厂”概念的面向对象的设计模式。和其他的创建型模式Template Method一样，它也是处理在不指定对象具体类型的情况下创建对象的问题。该模式的实质实际上是”定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类。因此工厂方法的作用就是将实例化进程推迟到子类当中进行”。在对象创建过程当中，有些过程包括决定创建哪个对象，管理对象的生命周期，以及管理特定对象的创建以及销毁。<a href="https://en.wikipedia.org/wiki/Factory_method_pattern" target="_blank" rel="external">—Wikipedia</a></p>
 </blockquote>
+<a id="more"></a>
 <p><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fb7z27kettj30rs0dw3zw.jpg" alt=""></p>
 <h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
 <li><p>简单工厂模式</p>
@@ -578,7 +579,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式-Factory-Pattern"><span class="nav-number">1.</span> <span class="nav-text">工厂模式 (Factory Pattern)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">1.3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">1.3.1.</span> <span class="nav-text">简单工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优缺点"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">优缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工厂方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">工厂方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优缺点-1"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">优缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象工厂"><span class="nav-number">1.3.3.</span> <span class="nav-text">抽象工厂</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">3.1.</span> <span class="nav-text">简单工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优缺点"><span class="nav-number">3.1.1.</span> <span class="nav-text">优缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工厂方法"><span class="nav-number">3.2.</span> <span class="nav-text">工厂方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优缺点-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">优缺点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象工厂"><span class="nav-number">3.3.</span> <span class="nav-text">抽象工厂</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
