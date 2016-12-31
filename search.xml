@@ -4,6 +4,21 @@
   
     
     <entry>
+      <title><![CDATA[Algorithm-Graph]]></title>
+      <url>http://yoursite.com/2016/12/31/Algorithm-Graph/</url>
+      <content type="html"><![CDATA[<h2 id="Graph-图"><a href="#Graph-图" class="headerlink" title="Graph (图)"></a>Graph (图)</h2><blockquote>
+<p>简单来说，图是由一组顶点<code>(Vertex)</code>和一组能够将两个顶点相连的边<code>(Edge)</code>组成的。同时根据边是否有向还可以把图分为有向图和无向图。<br><a id="more"></a></p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Design Pattern-Adapter Pattern]]></title>
+      <url>http://yoursite.com/2016/12/30/Design-Pattern-Adapter-Pattern/</url>
+      <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Design Pattern-Factory Pattern]]></title>
       <url>http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/</url>
       <content type="html"><![CDATA[<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
@@ -63,7 +78,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Design Pattern-Singleton]]></title>
+      <title><![CDATA[Design Pattern-Singleton Pattern]]></title>
       <url>http://yoursite.com/2016/12/22/Design%20Pattern-Singleton/</url>
       <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在软件工程当中，设计模式 (Design Pattern) 是对软件设计当中普遍存在的各种问题，所得出的解决方案。设计模式并不是直接用来完成代码的编写，而是描述在不同的状况下，要如何解决问题的一种方案。</p>
 <a id="more"></a>
@@ -74,8 +89,7 @@
 <ul>
 <li><img src="http://s9.sinaimg.cn/mw690/674f4fc6gddd1e4334838&amp;690" alt=""></li>
 </ul>
-<blockquote>
-<p>特点:</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><blockquote>
 <p>A:单例模式只能存在一个实例；</p>
 <p>B:单例模式类必须自己创建自己的唯一实例；</p>
 <p>C:单例模式类必须给其他所有对象提供这个实例</p>
