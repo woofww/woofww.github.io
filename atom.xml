@@ -43,29 +43,50 @@
     <link href="http://yoursite.com/2016/12/30/Algorithm-Graph/"/>
     <id>http://yoursite.com/2016/12/30/Algorithm-Graph/</id>
     <published>2016-12-30T09:55:12.000Z</published>
-    <updated>2017-01-02T12:58:55.290Z</updated>
+    <updated>2017-01-04T06:27:54.605Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Graph-图"><a href="#Graph-图" class="headerlink" title="Graph (图)"></a>Graph (图)</h2><blockquote>
-<p>简单来说，图是由一组顶点(Vertex)和一组能够将两个顶点相连的边(Edge)组成的。同时根据边是否有向还可以把图分为有向图和无向图。</p>
+<p>简单来说，图 G(V,E)是由一组顶点(Vertex)和一组能够将两个顶点相连的边(Edge)组成的。同时根据边是否有向还可以把图分为有向图和无向图。当对图中的边赋予某些数值的时候(比如每条边对应的路径长度)，这时候又可以分为有权重和无权重图。</p>
 </blockquote>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="无向图、有向图"><a href="#无向图、有向图" class="headerlink" title="无向图、有向图"></a>无向图、有向图</h4><a id="more"></a>
-]]></content>
+<a id="more"></a>
+<h3 id="图相关概念"><a href="#图相关概念" class="headerlink" title="图相关概念"></a>图相关概念</h3><ul>
+<li>Vertex: 图当中用于连接的基本元素</li>
+<li>Edge: 将顶点相连接的线</li>
+<li>Path: 由图中的一个顶点到达另一个顶点所经过的边</li>
+<li>Cycle: 由图当中的一个顶点经过一系列路径最终返回该顶点，这条路径被称为环(Cycle)</li>
+<li>Degree: 顶点的度表示的是和该顶点相连接的边的数目，在有向图当中又被分为出度和入度</li>
+<li>Connected Component: 所有相互连接的顶点和边构成了Connected Component，在一张图中可能会含有多个CC</li>
+<li>Connectivity: 在图论当中，如果图当中的任意的一个顶点都存在一条到达另一个顶点的路径，这是就称这幅图的连通的。例：树就是一种无环连通图</li>
+</ul>
+<div align="center"><br><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fbegimu9cqj30fh09g0td.jpg" alt=""><br></div>
+
+<h3 id="图的表示方法"><a href="#图的表示方法" class="headerlink" title="图的表示方法"></a>图的表示方法</h3><h4 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h4><ul>
+<li>使用一个V*V的布尔矩阵来表示图，当定点v和w之间存在连接的时候，将v行w列的元素设置为true</li>
+</ul>
+<div align="center"><br><img src="https://ww2.sinaimg.cn/large/006tKfTcgw1fbekrvm5lbj30ic09g404.jpg" alt=""><br></div>
+
+<h4 id="邻接表数组"><a href="#邻接表数组" class="headerlink" title="邻接表数组"></a>邻接表数组</h4><ul>
+<li>可以利用图的顶点作为一个索引列表数组，其中的每一个元素都是和该索引顶点相邻的顶点的列表</li>
+</ul>
+<div align="center"><br><img src="http://algs4.cs.princeton.edu/41graph/images/adjacency-lists.png" alt=""><br></div>
+
+
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="Undirected-Graph"><a href="#Undirected-Graph" class="headerlink" title="Undirected Graph"></a>Undirected Graph</h3><h3 id="Directed-Graph"><a href="#Directed-Graph" class="headerlink" title="Directed Graph"></a>Directed Graph</h3>]]></content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;Graph-图&quot;&gt;&lt;a href=&quot;#Graph-图&quot; class=&quot;headerlink&quot; title=&quot;Graph (图)&quot;&gt;&lt;/a&gt;Graph (图)&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;简单来说，图是由一组顶点(Vertex)和一组能够将两个顶点相连的边(Edge)组成的。同时根据边是否有向还可以把图分为有向图和无向图。&lt;/p&gt;
+&lt;p&gt;简单来说，图 G(V,E)是由一组顶点(Vertex)和一组能够将两个顶点相连的边(Edge)组成的。同时根据边是否有向还可以把图分为有向图和无向图。当对图中的边赋予某些数值的时候(比如每条边对应的路径长度)，这时候又可以分为有权重和无权重图。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分类&lt;/h3&gt;&lt;h4 id=&quot;无向图、有向图&quot;&gt;&lt;a href=&quot;#无向图、有向图&quot; class=&quot;headerlink&quot; title=&quot;无向图、有向图&quot;&gt;&lt;/a&gt;无向图、有向图&lt;/h4&gt;
     
     </summary>
     
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
     
   </entry>
   
@@ -307,9 +328,9 @@
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
     
   </entry>
   
@@ -595,9 +616,9 @@
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
     
   </entry>
   
