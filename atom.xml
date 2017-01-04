@@ -43,7 +43,7 @@
     <link href="http://yoursite.com/2016/12/30/Algorithm-Graph/"/>
     <id>http://yoursite.com/2016/12/30/Algorithm-Graph/</id>
     <published>2016-12-30T09:55:12.000Z</published>
-    <updated>2017-01-04T06:27:54.605Z</updated>
+    <updated>2017-01-04T12:23:33.928Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Graph-图"><a href="#Graph-图" class="headerlink" title="Graph (图)"></a>Graph (图)</h2><blockquote>
 <p>简单来说，图 G(V,E)是由一组顶点(Vertex)和一组能够将两个顶点相连的边(Edge)组成的。同时根据边是否有向还可以把图分为有向图和无向图。当对图中的边赋予某些数值的时候(比如每条边对应的路径长度)，这时候又可以分为有权重和无权重图。</p>
@@ -71,7 +71,24 @@
 <div align="center"><br><img src="http://algs4.cs.princeton.edu/41graph/images/adjacency-lists.png" alt=""><br></div>
 
 
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="Undirected-Graph"><a href="#Undirected-Graph" class="headerlink" title="Undirected Graph"></a>Undirected Graph</h3><h3 id="Directed-Graph"><a href="#Directed-Graph" class="headerlink" title="Directed Graph"></a>Directed Graph</h3>]]></content>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="Undirected-Graph"><a href="#Undirected-Graph" class="headerlink" title="Undirected Graph"></a>Undirected Graph</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Graph</span></span>&#123;</div><div class="line">Graph(<span class="keyword">int</span> V)                 创建一个含有V个顶点但是不含有边的图</div><div class="line">Graph(In in)                 通过标准输入流in读入一幅图</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">V</span><span class="params">()</span>                      顶点数</span></div><div class="line"><span class="keyword">int</span> <span class="title">E</span><span class="params">()</span>                      边数</div><div class="line"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> w)</span>   在顶点v w之间添加一条边</div><div class="line">Iterable&lt;Integer&gt; <span class="title">adj</span><span class="params">(<span class="keyword">int</span> v)</span> 和顶点v相邻的顶点</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="DFS-深度优先遍历"><a href="#DFS-深度优先遍历" class="headerlink" title="DFS (深度优先遍历)"></a>DFS (深度优先遍历)</h4><p>DFS用一句俗话来形容可以称为<strong>不撞南墙不回头</strong>，基于图的深度遍历是通过不断地对顶点的邻接表进行递归运算，当邻接表的点未被标记的时候，则继续进行DFS。当该点被标记的时候，则查询其他位，在所有邻接表中的所有顶点都完成查询的时候，向上返回。</p>
+<ul>
+<li>数据结构<ol>
+<li>用marked[]布尔数组标记访问过的顶点</li>
+<li>用edgeTo[]整型数组保存经过的路径</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DepthFirstSearch</span></span>&#123;</div><div class="line">    <span class="comment">//数组存储结构</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] edgeTo;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> s;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DepthFirstSearch</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">        <span class="comment">//数据结构的初始化</span></div><div class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</div><div class="line">        edgeTo = <span class="keyword">new</span> <span class="keyword">int</span>[G.V()];</div><div class="line">        <span class="keyword">this</span>.s = s;</div><div class="line">        dfs(G,s);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph G, <span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">        marked[v] = <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> w : G.adj(v))&#123;</div><div class="line">            <span class="keyword">if</span>(!marked[w])&#123;</div><div class="line">                edgeTo[w] = v;</div><div class="line">                dfs(G,w);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="BFS-广度优先遍历"><a href="#BFS-广度优先遍历" class="headerlink" title="BFS (广度优先遍历)"></a>BFS (广度优先遍历)</h4><p>相对于DFSl的<strong>一条路走到黑</strong>，BSF更像是<strong>多路分身齐头并进</strong>，BFS可以用于最短路径的搜索，如果要找到某两点之间的最短距离，需要从起始点开始，在所有经过一条边即可到达的点当中寻找目标点，如果找不多继续扩大，知道最终成功找到目标点。</p>
+<ul>
+<li><p>数据结构</p>
+<p>  除了和DFS中一致的数据结构之外，BFS还显式的使用了队列，来按照起点的顺序遍历所有顶点(比如首先将起始点加入队列，随后在队列中移除起始点，将于起始点相连的边长为1的顶点加入队列，以此类推)</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BreadthFirstSearch</span></span>&#123;</div><div class="line">    <span class="comment">//数组存储结构</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] edgeTo;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> s;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BreadthFirstSearch</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">        <span class="comment">//数据结构的初始化</span></div><div class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</div><div class="line">        edgeTo = <span class="keyword">new</span> <span class="keyword">int</span>[G.V()];</div><div class="line">        <span class="keyword">this</span>.s = s;</div><div class="line">        dfs(G,s);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph G, <span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">        Queue&lt;Integer&gt; queue = <span class="keyword">new</span> Queue();</div><div class="line">        marked[v] = <span class="keyword">true</span>;</div><div class="line">        queue.enqueue(s);</div><div class="line">        <span class="keyword">while</span>(!queue,isEmpty())&#123;</div><div class="line">            <span class="keyword">int</span> v = queue.dequeue(); <span class="comment">//从队列中删去下一顶点</span></div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> w : G.adj(v))&#123;</div><div class="line">                <span class="keyword">if</span>(!marked[w])&#123;</div><div class="line">                    edgeTo[w] = v;</div><div class="line">                    marked[w] = <span class="keyword">true</span>;</div><div class="line">                    queue.enqueue(w);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Directed-Graph"><a href="#Directed-Graph" class="headerlink" title="Directed Graph"></a>Directed Graph</h3>]]></content>
     
     <summary type="html">
     
@@ -84,9 +101,9 @@
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
     
   </entry>
   
@@ -328,9 +345,9 @@
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
     
   </entry>
   
@@ -616,9 +633,9 @@
       <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
     
   </entry>
   
