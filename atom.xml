@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-05T05:01:38.348Z</updated>
+  <updated>2017-01-05T12:56:01.123Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Algorithm-MST, Shortest Path</title>
+    <link href="http://yoursite.com/2017/01/05/Algorithm-MST-Shortest-Path/"/>
+    <id>http://yoursite.com/2017/01/05/Algorithm-MST-Shortest-Path/</id>
+    <published>2017-01-05T12:56:01.000Z</published>
+    <updated>2017-01-05T12:56:01.123Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Design Pattern-Adapter Pattern</title>
     <link href="http://yoursite.com/2016/12/31/Design-Pattern-Adapter-Pattern/"/>
     <id>http://yoursite.com/2016/12/31/Design-Pattern-Adapter-Pattern/</id>
     <published>2016-12-31T08:38:17.000Z</published>
-    <updated>2017-01-05T05:01:38.348Z</updated>
+    <updated>2017-01-05T13:06:12.789Z</updated>
     
     <content type="html"><![CDATA[<h2 id="产生动机"><a href="#产生动机" class="headerlink" title="产生动机"></a>产生动机</h2><ul>
 <li>在软件开发当中，适配器模式(Adapter Pattern)正如其名，非常类似于我们生活当中的电源适配器(可将交流电压转化为正常工作电压)</li>
@@ -42,7 +60,7 @@
 <p><img src="https://ww4.sinaimg.cn/large/006tKfTcgw1fbfnrc2mqwj30h8081aai.jpg" alt=""></p>
 <p> 对象适配器</p>
 <p><img src="https://ww4.sinaimg.cn/large/006tKfTcgw1fbfnrtyln7j30hp095gm7.jpg" alt=""></p>
-]]></content>
+<h1 id="to-be-continue"><a href="#to-be-continue" class="headerlink" title="to be continue"></a>to be continue</h1>]]></content>
     
     <summary type="html">
     
