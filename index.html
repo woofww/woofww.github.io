@@ -337,7 +337,23 @@
 
       
         
-          <h2 id="新坑占位，新年快乐！"><a href="#新坑占位，新年快乐！" class="headerlink" title="新坑占位，新年快乐！"></a>新坑占位，新年快乐！</h2>
+          <h2 id="产生动机"><a href="#产生动机" class="headerlink" title="产生动机"></a>产生动机</h2><ul>
+<li>在软件开发当中，适配器模式(Adapter Pattern)正如其名，非常类似于我们生活当中的电源适配器(可将交流电压转化为正常工作电压)</li>
+<li>在实际的编程当中，Client一般可以通过目标类的接口访问它提供的各种服务，有的时候现有的类能够满足客户对某个功能的要求，但是它提供的接口并不是客户所期望的，原因可能因为是现有类当中的方法名和目标类当中定义的方法名不一致所导致的。</li>
+<li>在出现上述情况的时候，我们就需要将现有的接口转化为客户所期望的接口，通过这种方式便可以保证对现有类的重用，如果不进行这种操作，Client就无法使用现有类所提供的功能，这时候适配器就可以实现这个作用。</li>
+<li>在适配器模式当中可以定义一个Wrapper类，将不兼容接口的对象进行包装，Wrapper类指代的就是Adapter，它包装的对象就是适配者(Adaptee)。</li>
+<li>适配器向Client提供需要的接口，它实现的就是把Client的请求转化为对适配者(Adaptee)对应接口的调用，客户类并不会直接访问适配者类，而是通过适配器使得由于接口不兼容而不能相互工作的类一起工作。</li>
+</ul>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="Adapter-Pattern-结构"><a href="#Adapter-Pattern-结构" class="headerlink" title="Adapter Pattern 结构"></a>Adapter Pattern 结构</h3><ul>
+<li>Target: 目标抽象类</li>
+<li>Adapter: 适配器类</li>
+<li>Adaptee: 适配者类</li>
+<li>Client: 客户类(可以对应为main)</li>
+</ul>
+<h4 id="适配器模式存在两种实现"><a href="#适配器模式存在两种实现" class="headerlink" title="适配器模式存在两种实现"></a>适配器模式存在两种实现</h4><p>类适配器</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgw1fbfnrc2mqwj30h8081aai.jpg" alt=""></p>
+<p> 对象适配器</p>
+<p><img src="https://ww4.sinaimg.cn/large/006tKfTcgw1fbfnrtyln7j30hp095gm7.jpg" alt=""></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/31/Design-Pattern-Adapter-Pattern/#more" rel="contents">
               阅读全文 &raquo;
