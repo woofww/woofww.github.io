@@ -86,13 +86,21 @@
 
 
 
+<meta name="description" content="最小生成树加权图
+在直接讨论最小生成树之前，首先介绍加权图这个概念，这是一种每条边关联一个权值的基于图的模型，在实际生活中有很多加权图的应用，比如地图当中的路径长度。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm-MST, Shortest Path">
 <meta property="og:url" content="http://yoursite.com/2017/01/05/Algorithm-MST-Shortest-Path/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:updated_time" content="2017-01-05T12:56:01.123Z">
+<meta property="og:description" content="最小生成树加权图
+在直接讨论最小生成树之前，首先介绍加权图这个概念，这是一种每条边关联一个权值的基于图的模型，在实际生活中有很多加权图的应用，比如地图当中的路径长度。">
+<meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcgw1fbiatgcj12j30dw08eaah.jpg">
+<meta property="og:updated_time" content="2017-01-07T12:24:25.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-MST, Shortest Path">
+<meta name="twitter:description" content="最小生成树加权图
+在直接讨论最小生成树之前，首先介绍加权图这个概念，这是一种每条边关联一个权值的基于图的模型，在实际生活中有很多加权图的应用，比如地图当中的路径长度。">
+<meta name="twitter:image" content="https://ww3.sinaimg.cn/large/006tKfTcgw1fbiatgcj12j30dw08eaah.jpg">
 
 
 
@@ -313,7 +321,28 @@
       
 
       
-        <a id="more"></a>
+        <h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><h3 id="加权图"><a href="#加权图" class="headerlink" title="加权图"></a>加权图</h3><blockquote>
+<p>在直接讨论最小生成树之前，首先介绍加权图这个概念，这是一种每条边关联一个权值的基于图的模型，在实际生活中有很多加权图的应用，比如地图当中的路径长度。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="MST-概念"><a href="#MST-概念" class="headerlink" title="MST 概念"></a>MST 概念</h3><blockquote>
+<p>生成树表示的是一棵含有图中所有顶点的一个无环连通子图，而最小生成树又称<strong>最小权重生成树</strong>是加权图当中一棵权值和最小的生成树。</p>
+</blockquote>
+<h2 id="MST算法"><a href="#MST算法" class="headerlink" title="MST算法"></a>MST算法</h2><ul>
+<li>关于最小生成树相关算法，其中大多数都是属于贪心算法，通过使用切分定理查找最小生成树当中的一条边，同时不断重复直到找到生成树当中的所有边。</li>
+<li>切分定理就是将加权图分为两个集合，检查跨过这两个集合的所有边，然后找出哪条边属于最小生成树。<em>下图中展示了一幅权重图，红色的线表示的是横切边，加粗的红线则表示连接同一个顶点当中权重最小的一条</em></li>
+</ul>
+<div align="center"><br><img src="https://ww3.sinaimg.cn/large/006tKfTcgw1fbiatgcj12j30dw08eaah.jpg" alt=""><br></div>
+
+<h3 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h3><h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ul>
+<li>初始状态所有变均为灰色</li>
+<li>找出一种切分方式，它的横切边均不为红色</li>
+<li>反复操作知道标记V-1条红色边为止</li>
+</ul>
+<h3 id="Kruskal-算法"><a href="#Kruskal-算法" class="headerlink" title="Kruskal 算法"></a>Kruskal 算法</h3><blockquote>
+<p>Kruskal最小生成树算法属于一种比较易于理解的生成树算法，它的主要理念是基于对各条边的权重排序</p>
+</blockquote>
+<h4 id="步骤-1"><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h4>
       
     </div>
 
@@ -502,7 +531,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加权图"><span class="nav-number">1.1.</span> <span class="nav-text">加权图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MST-概念"><span class="nav-number">1.2.</span> <span class="nav-text">MST 概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MST算法"><span class="nav-number">2.</span> <span class="nav-text">MST算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#贪心算法"><span class="nav-number">2.1.</span> <span class="nav-text">贪心算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal-算法"><span class="nav-number">2.2.</span> <span class="nav-text">Kruskal 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">步骤</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
