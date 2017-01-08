@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://woofww.github.io/"/>
   <updated>2017-01-07T12:24:25.404Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://woofww.github.io/</id>
   
   <author>
     <name>Chang Wang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Algorithm-MST, Shortest Path</title>
-    <link href="http://yoursite.com/2017/01/05/Algorithm-MST-Shortest-Path/"/>
-    <id>http://yoursite.com/2017/01/05/Algorithm-MST-Shortest-Path/</id>
+    <link href="https://woofww.github.io/2017/01/05/Algorithm-MST-Shortest-Path/"/>
+    <id>https://woofww.github.io/2017/01/05/Algorithm-MST-Shortest-Path/</id>
     <published>2017-01-05T12:56:01.000Z</published>
     <updated>2017-01-07T12:24:25.404Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>Design Pattern-Adapter Pattern</title>
-    <link href="http://yoursite.com/2016/12/31/Design-Pattern-Adapter-Pattern/"/>
-    <id>http://yoursite.com/2016/12/31/Design-Pattern-Adapter-Pattern/</id>
+    <link href="https://woofww.github.io/2016/12/31/Design-Pattern-Adapter-Pattern/"/>
+    <id>https://woofww.github.io/2016/12/31/Design-Pattern-Adapter-Pattern/</id>
     <published>2016-12-31T08:38:17.000Z</published>
     <updated>2017-01-06T07:34:12.191Z</updated>
     
@@ -115,17 +115,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Design Pattern" scheme="http://yoursite.com/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://woofww.github.io/tags/Design-Pattern/"/>
     
   </entry>
   
   <entry>
     <title>Algorithm-Graph</title>
-    <link href="http://yoursite.com/2016/12/30/Algorithm-Graph/"/>
-    <id>http://yoursite.com/2016/12/30/Algorithm-Graph/</id>
+    <link href="https://woofww.github.io/2016/12/30/Algorithm-Graph/"/>
+    <id>https://woofww.github.io/2016/12/30/Algorithm-Graph/</id>
     <published>2016-12-30T09:55:12.000Z</published>
     <updated>2017-01-04T13:37:15.473Z</updated>
     
@@ -184,19 +184,19 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>Design Pattern-Factory Pattern</title>
-    <link href="http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/"/>
-    <id>http://yoursite.com/2016/12/28/Design-Pattern-Factory-Method/</id>
+    <link href="https://woofww.github.io/2016/12/28/Design-Pattern-Factory-Method/"/>
+    <id>https://woofww.github.io/2016/12/28/Design-Pattern-Factory-Method/</id>
     <published>2016-12-28T11:49:41.000Z</published>
     <updated>2016-12-30T08:32:11.829Z</updated>
     
@@ -263,17 +263,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Design Pattern" scheme="http://yoursite.com/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://woofww.github.io/tags/Design-Pattern/"/>
     
   </entry>
   
   <entry>
     <title>Design Pattern-Singleton Pattern</title>
-    <link href="http://yoursite.com/2016/12/22/Design%20Pattern-Singleton/"/>
-    <id>http://yoursite.com/2016/12/22/Design Pattern-Singleton/</id>
+    <link href="https://woofww.github.io/2016/12/22/Design%20Pattern-Singleton/"/>
+    <id>https://woofww.github.io/2016/12/22/Design Pattern-Singleton/</id>
     <published>2016-12-22T12:10:40.000Z</published>
     <updated>2016-12-30T09:52:13.384Z</updated>
     
@@ -322,17 +322,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Design Pattern" scheme="http://yoursite.com/tags/Design-Pattern/"/>
+      <category term="Design Pattern" scheme="https://woofww.github.io/tags/Design-Pattern/"/>
     
   </entry>
   
   <entry>
     <title>Algorithm-Searching</title>
-    <link href="http://yoursite.com/2016/12/19/Algorithm-Searching/"/>
-    <id>http://yoursite.com/2016/12/19/Algorithm-Searching/</id>
+    <link href="https://woofww.github.io/2016/12/19/Algorithm-Searching/"/>
+    <id>https://woofww.github.io/2016/12/19/Algorithm-Searching/</id>
     <published>2016-12-19T11:04:55.000Z</published>
     <updated>2016-12-27T12:47:20.464Z</updated>
     
@@ -428,19 +428,19 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>Algorithm-Advanced Sorting</title>
-    <link href="http://yoursite.com/2016/12/07/Algorithm-Advanced-Sorting/"/>
-    <id>http://yoursite.com/2016/12/07/Algorithm-Advanced-Sorting/</id>
+    <link href="https://woofww.github.io/2016/12/07/Algorithm-Advanced-Sorting/"/>
+    <id>https://woofww.github.io/2016/12/07/Algorithm-Advanced-Sorting/</id>
     <published>2016-12-07T13:30:31.000Z</published>
     <updated>2016-12-17T11:22:51.804Z</updated>
     
@@ -563,17 +563,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
   <entry>
     <title>Algorithm-Elementary Sorting</title>
-    <link href="http://yoursite.com/2016/11/28/Algorithm-Sorting/"/>
-    <id>http://yoursite.com/2016/11/28/Algorithm-Sorting/</id>
+    <link href="https://woofww.github.io/2016/11/28/Algorithm-Sorting/"/>
+    <id>https://woofww.github.io/2016/11/28/Algorithm-Sorting/</id>
     <published>2016-11-28T13:26:25.000Z</published>
     <updated>2016-12-08T12:08:23.266Z</updated>
     
@@ -649,17 +649,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
   <entry>
     <title>Data Structure-Stack</title>
-    <link href="http://yoursite.com/2016/11/24/Data%20Structure-Stack/"/>
-    <id>http://yoursite.com/2016/11/24/Data Structure-Stack/</id>
+    <link href="https://woofww.github.io/2016/11/24/Data%20Structure-Stack/"/>
+    <id>https://woofww.github.io/2016/11/24/Data Structure-Stack/</id>
     <published>2016-11-24T14:40:09.000Z</published>
     <updated>2016-12-03T13:08:08.282Z</updated>
     
@@ -716,19 +716,19 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="http://yoursite.com/tags/Data-Structure/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
   <entry>
     <title>Algorithm-Union Find</title>
-    <link href="http://yoursite.com/2016/11/12/Union-Find-Algorithm/"/>
-    <id>http://yoursite.com/2016/11/12/Union-Find-Algorithm/</id>
+    <link href="https://woofww.github.io/2016/11/12/Union-Find-Algorithm/"/>
+    <id>https://woofww.github.io/2016/11/12/Union-Find-Algorithm/</id>
     <published>2016-11-12T15:57:22.000Z</published>
     <updated>2016-12-08T12:10:59.358Z</updated>
     
@@ -788,17 +788,17 @@
     
     </summary>
     
-      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="http://yoursite.com/tags/Algorithm/"/>
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
   <entry>
     <title>HotKey of Intellij IDEA</title>
-    <link href="http://yoursite.com/2016/01/17/HotKey%20of%20Intellij%20IDEA/"/>
-    <id>http://yoursite.com/2016/01/17/HotKey of Intellij IDEA/</id>
+    <link href="https://woofww.github.io/2016/01/17/HotKey%20of%20Intellij%20IDEA/"/>
+    <id>https://woofww.github.io/2016/01/17/HotKey of Intellij IDEA/</id>
     <published>2016-01-17T06:06:11.000Z</published>
     <updated>2016-12-27T12:51:02.990Z</updated>
     
@@ -816,10 +816,10 @@
     
     </summary>
     
-      <category term="Tips" scheme="http://yoursite.com/categories/Tips/"/>
+      <category term="Tips" scheme="https://woofww.github.io/categories/Tips/"/>
     
     
-      <category term="IDE" scheme="http://yoursite.com/tags/IDE/"/>
+      <category term="IDE" scheme="https://woofww.github.io/tags/IDE/"/>
     
   </entry>
   
