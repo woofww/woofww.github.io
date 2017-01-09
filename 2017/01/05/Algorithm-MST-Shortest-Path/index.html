@@ -95,7 +95,7 @@
 <meta property="og:description" content="最小生成树加权图
 在直接讨论最小生成树之前，首先介绍加权图这个概念，这是一种每条边关联一个权值的基于图的模型，在实际生活中有很多加权图的应用，比如地图当中的路径长度。">
 <meta property="og:image" content="https://ww3.sinaimg.cn/large/006tKfTcgw1fbiatgcj12j30dw08eaah.jpg">
-<meta property="og:updated_time" content="2017-01-07T12:24:25.404Z">
+<meta property="og:updated_time" content="2017-01-09T12:31:27.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-MST, Shortest Path">
 <meta name="twitter:description" content="最小生成树加权图
@@ -342,7 +342,14 @@
 <h3 id="Kruskal-算法"><a href="#Kruskal-算法" class="headerlink" title="Kruskal 算法"></a>Kruskal 算法</h3><blockquote>
 <p>Kruskal最小生成树算法属于一种比较易于理解的生成树算法，它的主要理念是基于对各条边的权重排序</p>
 </blockquote>
-<h4 id="步骤-1"><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h4>
+<h4 id="步骤-1"><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h4><ul>
+<li>将图G当中的各条边的权重值进行排序</li>
+<li>取出排序当中权值最小的一条边</li>
+<li>如果从队列当中取出的这条边的结点不在同一个联通分量当中，则将这条边添加到图当中</li>
+<li>重复上述步骤</li>
+</ul>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KruskalMST</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> Queue&lt;Edge&gt; mst = <span class="keyword">new</span> Queue&lt;Edge&gt;();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">KruskalMST</span><span class="params">(EdgeWeightedGraph G)</span></span>&#123;</div><div class="line">        MinPQ&lt;Edge&gt; pq = <span class="keyword">new</span> MinPQ&lt;Edge&gt;(G.edges());</div><div class="line"></div><div class="line">        UF uf = <span class="keyword">new</span> UF(G.V());</div><div class="line">        <span class="keyword">while</span>(!pq.isEmpty()&amp;&amp;mst.size() &lt; G.V()-<span class="number">1</span>)&#123;</div><div class="line">            Edge e = pq.delMin();</div><div class="line">            <span class="keyword">int</span> v = e.either(), w = e.other(v)</div><div class="line">            <span class="keyword">if</span>(!uf.connected(v,w))&#123;</div><div class="line">                uf.union(v,w);</div><div class="line">                mst.enqueue(edge);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Prim-算法"><a href="#Prim-算法" class="headerlink" title="Prim 算法"></a>Prim 算法</h3>
       
     </div>
 
@@ -531,7 +538,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加权图"><span class="nav-number">1.1.</span> <span class="nav-text">加权图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MST-概念"><span class="nav-number">1.2.</span> <span class="nav-text">MST 概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MST算法"><span class="nav-number">2.</span> <span class="nav-text">MST算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#贪心算法"><span class="nav-number">2.1.</span> <span class="nav-text">贪心算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal-算法"><span class="nav-number">2.2.</span> <span class="nav-text">Kruskal 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">步骤</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加权图"><span class="nav-number">1.1.</span> <span class="nav-text">加权图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MST-概念"><span class="nav-number">1.2.</span> <span class="nav-text">MST 概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MST算法"><span class="nav-number">2.</span> <span class="nav-text">MST算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#贪心算法"><span class="nav-number">2.1.</span> <span class="nav-text">贪心算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal-算法"><span class="nav-number">2.2.</span> <span class="nav-text">Kruskal 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">2.2.2.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Prim-算法"><span class="nav-number">2.3.</span> <span class="nav-text">Prim 算法</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
