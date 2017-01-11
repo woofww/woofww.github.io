@@ -83,9 +83,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -220,9 +220,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -464,9 +464,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -752,9 +752,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -763,10 +763,10 @@
     <link href="https://woofww.github.io/2016/11/12/Union-Find-Algorithm/"/>
     <id>https://woofww.github.io/2016/11/12/Union-Find-Algorithm/</id>
     <published>2016-11-12T15:57:22.000Z</published>
-    <updated>2016-12-08T12:10:59.358Z</updated>
+    <updated>2017-01-10T13:25:07.611Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Princeton-Algorithm"><a href="#Princeton-Algorithm" class="headerlink" title="Princeton - Algorithm"></a>Princeton - Algorithm</h2><p>1st week：Union-Find</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br><a id="more"></a><br><img src="http://obpbs8a3y.bkt.clouddn.com/1.jpg" alt="enter image description here"><br><img src="http://img.blog.csdn.net/20130901114328078" alt="enter image description here"></p>
+<h2 id="Question-Description"><a href="#Question-Description" class="headerlink" title="Question Description"></a>Question Description</h2><p>有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图<br><a id="more"></a><br><img src="http://obpbs8a3y.bkt.clouddn.com/1.jpg" alt="enter image description here"><br><img src="http://img.blog.csdn.net/20130901114328078" alt="enter image description here"></p>
 <p>从上图中可以看出，0, 1, 2, 5, 6, 7 中的任意两个元素都是相连的，同样 3, 4, 8, 9 中任意两个元素也是互连的，但是第一个集合和第二个集合的元素却是无法连通的。</p>
 <p>实际操作中可用于在一个庞大的网路环境下，如何迅速判断某两个点是否相连，如下图：</p>
 <p><img src="http://i2.piimg.com/567571/38bfecc955fdf85c.jpg" alt="enter image description here"></p>
@@ -817,7 +817,7 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Princeton-Algorithm&quot;&gt;&lt;a href=&quot;#Princeton-Algorithm&quot; class=&quot;headerlink&quot; title=&quot;Princeton - Algorithm&quot;&gt;&lt;/a&gt;Princeton - Algorithm&lt;/h2&gt;&lt;p&gt;1st week：Union-Find&lt;/p&gt;
-&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图&lt;br&gt;
+&lt;h2 id=&quot;Question-Description&quot;&gt;&lt;a href=&quot;#Question-Description&quot; class=&quot;headerlink&quot; title=&quot;Question Description&quot;&gt;&lt;/a&gt;Question Description&lt;/h2&gt;&lt;p&gt;有N个元素，从0~N-1编号，假如两个元素之间的连接视为通路，当执行多次任意的两个元素之间的连接之后，如何判断两个元素能够经由已有路径相连通。对于连接的动作称为union，判断是否连接的操作称为find，如下图&lt;br&gt;
     
     </summary>
     
