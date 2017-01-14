@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://algs4.cs.princeton.edu/34hash/images/linear-probing.png">
 <meta property="og:image" content="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160328162810.jpg">
 <meta property="og:image" content="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160328190932.jpg">
-<meta property="og:updated_time" content="2016-12-27T12:47:20.464Z">
+<meta property="og:updated_time" content="2017-01-14T13:23:17.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithm-Searching">
 <meta name="twitter:description" content="Symbol Table (符号表)
@@ -374,9 +374,13 @@
 </blockquote>
 <h3 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h3><p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320221749.jpg" alt="enter image description here"></p>
 <h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p>当二叉树为空时，查找对应未命中；当被查找的键和根结点的键对应的时候，即为查找命中。否则便递归地在子树当中进行查找，如果被查找的键比较小，选择左子树，否则便选择右子树。</p>
-<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgw1fayquslvw0j30f20avjte.jpg" alt=""></p>
+<p><div align="center"><br><img src="http://ww4.sinaimg.cn/large/006tNbRwgw1fayquslvw0j30f20avjte.jpg" alt=""></div></p>
+<div>
+
 <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>当查找一个不存在于树当中的节点并且查找结束于一条空链接的时候，需要将链接指向一个含有被查找的键的新结点的位置。简而言之，当树为空，但会含有被查找键值对的新节点；当被查找的键小于根节点的键时，在左子树插入，否则在右子树插入。</p>
-<p><img src="http://algs4.cs.princeton.edu/32bst/images/bst-insert.png" alt=""></p>
+<p><div align="center"><br><img src="http://algs4.cs.princeton.edu/32bst/images/bst-insert.png" alt=""></div></p>
+<div>
+
 <h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>Binary Search的算法的查找和插入运行时间在平均情况下都可以达到O(logn)。当时这个时间复杂度在很大程度上会受到树的形状的影响，同时树的形状又取决于键值被插入的先后顺序。</p>
 <p>最好的情况系啊，一棵含有N个结点的树是完全平衡的，每条空连接到其根结点的距离都为logN。但是在最坏的情况下，搜索的路径上可能含有N个节点</p>
 <p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320222706.jpg" alt=""></p>
@@ -391,9 +395,13 @@
 <li><p>2-3树当中的3结点，含有两个<code>key</code>以及三条链接，左链接<br>对应的<code>key</code>都大于该结点，右链接对应的<code>key</code>都小于该结点，，中间链接对应的结点处于该结点两个<code>key</code>的中间。</p>
 </li>
 </ol>
-<p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320225636.jpg" alt=""></p>
+<p><div align="center"><br><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160320225636.jpg" alt=""></div></p>
+<div>
+
 <h4 id="查找-1"><a href="#查找-1" class="headerlink" title="查找"></a>查找</h4><p>判断<code>key</code>是否在2-3树当中，先将<code>key</code>和结点的<code>key</code>进行比较，如果相等则查找成功。如果未找到，则继续根据情况在子链接当中递归的进行查找。如果最终为空连接，查找未命中。</p>
-<p><img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-search.png" alt=""></p>
+<p><div align="center"><br><img src="http://algs4.cs.princeton.edu/33balanced/images/23tree-search.png" alt=""></div></p>
+<div>
+
 <h4 id="插入-1"><a href="#插入-1" class="headerlink" title="插入"></a>插入</h4><ul>
 <li><p>向2-结点当中插入新键</p>
 <p>  当插入操作结束于一个2-结点的时候，直接将2-结点替换为一个3-结点，便可以让树继续保持平衡。</p>
@@ -436,7 +444,7 @@
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>一般的，在应用查找算法的时候，散列表的性能会比红黑树性能好很多，但是这也和 Hash Function的计算效率相关联。但是对于散列表来说，它并不能保证顺序，因此对于顺序操作还是应该采用树结构。</p>
 <h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p><img src="http://7xrsib.com1.z0.glb.clouddn.com/searchQQ%E6%88%AA%E5%9C%9620160328190932.jpg" alt=""></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://algs4.cs.princeton.edu/20sorting/" target="_blank" rel="external">Princeton-Algorithm 4th, Searching Algorithm</a></p>
-
+</div></div></div></div>
       
     </div>
 
