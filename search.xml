@@ -4,6 +4,15 @@
   
     
     <entry>
+      <title><![CDATA[Java Programming-Multithreading]]></title>
+      <url>https://woofww.github.io/2017/01/16/Java-Programming-Multithreading/</url>
+      <content type="html"><![CDATA[<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><blockquote>
+<p>对于进程和线程等概念，我们经常可以在一些涉及操作系统的书籍当中了解到相关的内容。诸如在电脑或者智能手机等设备上，很多操作都是可以并行执行的，eg:在浏览网页的时候听音乐，在编写文档的时候进行后台的图片下载。这些都是多任务(Multitasking)功能为我们的生活带来的便利。<br><a id="more"></a></p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Algorithm-MST, Shortest Path]]></title>
       <url>https://woofww.github.io/2017/01/05/Algorithm-MST-Shortest-Path/</url>
       <content type="html"><![CDATA[<h2 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h2><h3 id="加权图"><a href="#加权图" class="headerlink" title="加权图"></a>加权图</h3><blockquote>

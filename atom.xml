@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woofww.github.io/"/>
-  <updated>2017-01-13T12:13:22.826Z</updated>
+  <updated>2017-01-16T12:10:21.356Z</updated>
   <id>https://woofww.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Programming-Multithreading</title>
+    <link href="https://woofww.github.io/2017/01/16/Java-Programming-Multithreading/"/>
+    <id>https://woofww.github.io/2017/01/16/Java-Programming-Multithreading/</id>
+    <published>2017-01-16T11:56:28.000Z</published>
+    <updated>2017-01-16T12:10:21.356Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><blockquote>
+<p>对于进程和线程等概念，我们经常可以在一些涉及操作系统的书籍当中了解到相关的内容。诸如在电脑或者智能手机等设备上，很多操作都是可以并行执行的，eg:在浏览网页的时候听音乐，在编写文档的时候进行后台的图片下载。这些都是多任务(Multitasking)功能为我们的生活带来的便利。<br><a id="more"></a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;进程和线程&quot;&gt;&lt;a href=&quot;#进程和线程&quot; class=&quot;headerlink&quot; title=&quot;进程和线程&quot;&gt;&lt;/a&gt;进程和线程&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;对于进程和线程等概念，我们经常可以在一些涉及操作系统的书籍当中了解到相关的内容。诸如在电脑或者智能手机等设备上，很多操作都是可以并行执行的，eg:在浏览网页的时候听音乐，在编写文档的时候进行后台的图片下载。这些都是多任务(Multitasking)功能为我们的生活带来的便利。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
+    
+    
+      <category term="Java" scheme="https://woofww.github.io/tags/Java/"/>
+    
+      <category term="Multithreading" scheme="https://woofww.github.io/tags/Multithreading/"/>
+    
+  </entry>
   
   <entry>
     <title>Algorithm-MST, Shortest Path</title>
@@ -109,9 +137,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -248,9 +276,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -500,9 +528,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -788,9 +816,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
