@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woofww.github.io/"/>
-  <updated>2017-01-19T12:10:23.766Z</updated>
+  <updated>2017-01-20T13:27:31.862Z</updated>
   <id>https://woofww.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Design Pattern-Observer Pattern</title>
+    <link href="https://woofww.github.io/2017/01/20/Design-Pattern-Observer-Pattern/"/>
+    <id>https://woofww.github.io/2017/01/20/Design-Pattern-Observer-Pattern/</id>
+    <published>2017-01-20T13:03:40.000Z</published>
+    <updated>2017-01-20T13:27:31.862Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+    
+    </summary>
+    
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
+    
+    
+      <category term="Design Pattern" scheme="https://woofww.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
   
   <entry>
     <title>Java Programming-Multithreading(Episode 1)</title>
