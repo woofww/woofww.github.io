@@ -6,7 +6,8 @@
     <entry>
       <title><![CDATA[Design Pattern-Observer Pattern]]></title>
       <url>https://woofww.github.io/2017/01/20/Design-Pattern-Observer-Pattern/</url>
-      <content type="html"><![CDATA[<a id="more"></a>
+      <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。</p>
+<a id="more"></a>
 ]]></content>
     </entry>
     
