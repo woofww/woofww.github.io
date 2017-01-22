@@ -86,16 +86,21 @@
 
 
 
-<meta name="description" content="概述观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。">
+<meta name="description" content="概述
+观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常*有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。观察者模式同时也被称为发布-订阅模式(Publish/Subscribe)模式，模型-视图模式(Model/View)，源-监听器模式(Source/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Design Pattern-Observer Pattern">
 <meta property="og:url" content="https://woofww.github.io/2017/01/20/Design-Pattern-Observer-Pattern/index.html">
 <meta property="og:site_name" content="EmptyNode">
-<meta property="og:description" content="概述观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。">
-<meta property="og:updated_time" content="2017-01-21T13:19:46.512Z">
+<meta property="og:description" content="概述
+观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常*有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。观察者模式同时也被称为发布-订阅模式(Publish/Subscribe)模式，模型-视图模式(Model/View)，源-监听器模式(Source/">
+<meta property="og:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fbzofj34wbj30m90g7gnr.jpg">
+<meta property="og:updated_time" content="2017-01-22T12:25:17.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Design Pattern-Observer Pattern">
-<meta name="twitter:description" content="概述观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。">
+<meta name="twitter:description" content="概述
+观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常*有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。观察者模式同时也被称为发布-订阅模式(Publish/Subscribe)模式，模型-视图模式(Model/View)，源-监听器模式(Source/">
+<meta name="twitter:image" content="https://ww2.sinaimg.cn/large/006tNbRwgy1fbzofj34wbj30m90g7gnr.jpg">
 
 
 
@@ -335,9 +340,23 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>观察者模式(Observer Pattern)在处理软件设计当中，对象存在这一对多的关系的时候是非常*有效的。比如在一个对象的状态被修改的时候，其他和它绑定的对象便会得到它的通知，这个行为也和我们在Android中经常用到的回调机制是相类似的。观察者模式同时也被称为发布-订阅模式(Publish/Subscribe)模式，模型-视图模式(Model/View)，源-监听器模式(Source/Listener)。</li>
+</ul>
 <a id="more"></a>
-
+<ul>
+<li>观察者模式属于的是一种对象行为型模式</li>
+</ul>
+<h2 id="设计结构"><a href="#设计结构" class="headerlink" title="设计结构"></a>设计结构</h2><p>观察者模式中一般都包含一下几种对象：</p>
+<ul>
+<li>Subject:目标</li>
+<li>ConcreteSubject:具体目标</li>
+<li>Observer:观察者</li>
+<li>ConcreteObserver:具体观察者</li>
+</ul>
+<p><div align="center"><br><img src="https://ww2.sinaimg.cn/large/006tNbRwgy1fbzofj34wbj30m90g7gnr.jpg" alt=""></div></p>
+<div>
+</div>
       
     </div>
 
@@ -532,7 +551,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计结构"><span class="nav-number">2.</span> <span class="nav-text">设计结构</span></a></li></ol></div>
             
           </div>
         </section>
