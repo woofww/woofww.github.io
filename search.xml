@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[Java Programming-Multithreading(Episode 2)]]></title>
+      <url>https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换</p>
+</blockquote>
+<h2 id="中断线程"><a href="#中断线程" class="headerlink" title="中断线程"></a>中断线程</h2><p>当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。<br><a id="more"></a></p>
+<p>当在java当中对一个线程使用interrupt方法的时候，对应线程的中断状态将被置位，该标志位存在于每个线程当中，用来判断该线程是否被中断。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Design Pattern-Observer Pattern]]></title>
       <url>https://woofww.github.io/2017/01/20/Design-Pattern-Observer-Pattern/</url>
       <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>

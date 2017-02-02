@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,Multithreading," />
 
 
 
@@ -86,12 +86,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="EmptyNode">
-<meta property="og:url" content="https://woofww.github.io/categories/Tips/index.html">
+<meta name="description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换
+
+中断线程当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Programming-Multithreading(Episode 2)">
+<meta property="og:url" content="https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/index.html">
 <meta property="og:site_name" content="EmptyNode">
+<meta property="og:description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换
+
+中断线程当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。">
+<meta property="og:updated_time" content="2017-02-02T12:20:33.606Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EmptyNode">
+<meta name="twitter:title" content="Java Programming-Multithreading(Episode 2)">
+<meta name="twitter:description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换
+
+中断线程当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。">
 
 
 
@@ -109,7 +119,7 @@
   };
 </script>
 
-  <title> 分类: Tips | EmptyNode </title>
+  <title> Java Programming-Multithreading(Episode 2) | EmptyNode </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -130,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,47 +261,146 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Tips
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java Programming-Multithreading(Episode 2)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-02T20:09:21+08:00" content="2017-02-02">
+              2017-02-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Technique/" itemprop="url" rel="index">
+                    <span itemprop="name">Technique</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <blockquote>
+<p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换</p>
+</blockquote>
+<h2 id="中断线程"><a href="#中断线程" class="headerlink" title="中断线程"></a>中断线程</h2><p>当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。<br><a id="more"></a></p>
+<p>当在java当中对一个线程使用interrupt方法的时候，对应线程的中断状态将被置位，该标志位存在于每个线程当中，用来判断该线程是否被中断。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/01/17/HotKey of Intellij IDEA/" itemprop="url">
-              
-                <span itemprop="name">HotKey of Intellij IDEA</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-01-17T14:06:11+08:00"
-              content="2016-01-17" >
-          01-17
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+            <a href="/tags/Multithreading/" rel="tag">#Multithreading</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/20/Design-Pattern-Observer-Pattern/" rel="next" title="Design Pattern-Observer Pattern">
+                <i class="fa fa-chevron-left"></i> Design Pattern-Observer Pattern
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +408,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -318,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -414,6 +536,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">1.</span> <span class="nav-text">中断线程</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -510,6 +643,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

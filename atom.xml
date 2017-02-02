@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woofww.github.io/"/>
-  <updated>2017-01-31T08:43:34.541Z</updated>
+  <updated>2017-02-02T12:20:33.606Z</updated>
   <id>https://woofww.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Programming-Multithreading(Episode 2)</title>
+    <link href="https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/"/>
+    <id>https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/</id>
+    <published>2017-02-02T12:09:21.000Z</published>
+    <updated>2017-02-02T12:20:33.606Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换</p>
+</blockquote>
+<h2 id="中断线程"><a href="#中断线程" class="headerlink" title="中断线程"></a>中断线程</h2><p>当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。<br><a id="more"></a></p>
+<p>当在java当中对一个线程使用interrupt方法的时候，对应线程的中断状态将被置位，该标志位存在于每个线程当中，用来判断该线程是否被中断。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;中断线程&quot;&gt;&lt;a href=&quot;#中断线程&quot; class=&quot;headerlink&quot; title=&quot;中断线程&quot;&gt;&lt;/a&gt;中断线程&lt;/h2&gt;&lt;p&gt;当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
+    
+    
+      <category term="Java" scheme="https://woofww.github.io/tags/Java/"/>
+    
+      <category term="Multithreading" scheme="https://woofww.github.io/tags/Multithreading/"/>
+    
+  </entry>
   
   <entry>
     <title>Design Pattern-Observer Pattern</title>
@@ -217,9 +249,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -356,9 +388,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -612,9 +644,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
@@ -900,9 +932,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
-    
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
     
   </entry>
   
