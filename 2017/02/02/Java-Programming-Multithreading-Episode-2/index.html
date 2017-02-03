@@ -96,7 +96,7 @@
 <meta property="og:description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换
 
 中断线程当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。">
-<meta property="og:updated_time" content="2017-02-02T12:20:33.606Z">
+<meta property="og:updated_time" content="2017-02-03T13:42:08.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Programming-Multithreading(Episode 2)">
 <meta name="twitter:description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换
@@ -346,6 +346,9 @@
 </blockquote>
 <h2 id="中断线程"><a href="#中断线程" class="headerlink" title="中断线程"></a>中断线程</h2><p>当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。<br><a id="more"></a></p>
 <p>当在java当中对一个线程使用interrupt方法的时候，对应线程的中断状态将被置位，该标志位存在于每个线程当中，用来判断该线程是否被中断。</p>
+<h3 id="线程中断的判断"><a href="#线程中断的判断" class="headerlink" title="线程中断的判断"></a>线程中断的判断</h3><p>如果需要对线程是否被中断进行判断，可以通过调用isInterrupted()方法来进行判断；需要值得注意的是<strong>当线程处于被阻塞状态的时候，中断状态便无法进行检测，此时会调用中断异常InterruptedException</strong></p>
+<h3 id="中断响应"><a href="#中断响应" class="headerlink" title="中断响应"></a>中断响应</h3><p>当检测一个线程是否被中断的时候，通过判断其标志位，当中断标志位为true的时候，判断该线程被中断，线程可以对中断做出响应，也可以继续进行线程的执行工作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">try</span>&#123;</div><div class="line">        <span class="keyword">while</span>(!Thread.currentThread().isInterrupted())&#123;<span class="comment">//do more work&#125;</span></div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</div><div class="line">        <span class="comment">//线程在阻塞过程中发生中断</span></div><div class="line">    &#125;<span class="keyword">finally</span>&#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -543,7 +546,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">1.</span> <span class="nav-text">中断线程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">1.</span> <span class="nav-text">中断线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程中断的判断"><span class="nav-number">1.1.</span> <span class="nav-text">线程中断的判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断响应"><span class="nav-number">1.2.</span> <span class="nav-text">中断响应</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
