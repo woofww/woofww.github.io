@@ -7,7 +7,7 @@
       <title><![CDATA[Java Programming-Multithreading(Episode 2)]]></title>
       <url>https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换</p>
+<p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换等内容</p>
 </blockquote>
 <h2 id="中断线程"><a href="#中断线程" class="headerlink" title="中断线程"></a>中断线程</h2><p>当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。<br><a id="more"></a></p>
 <p>当在java当中对一个线程使用interrupt方法的时候，对应线程的中断状态将被置位，该标志位存在于每个线程当中，用来判断该线程是否被中断。</p>
@@ -25,6 +25,11 @@
 </ul>
 <p><div align="center"><br><img src="https://ww1.sinaimg.cn/large/006tNbRwgy1fceoxr7o7gj30m70al3z3.jpg" alt="线程状态"></div></p>
 <div>
+
+<h3 id="线程阻塞和等待"><a href="#线程阻塞和等待" class="headerlink" title="线程阻塞和等待"></a>线程阻塞和等待</h3><ul>
+<li>当线程尝试获取一个内部的对象锁的时候，但是其他线程正在持有该锁，那么请求该锁的线程即将处于阻塞状态；当请求的锁被其他线程释放的时候，同时调度器允许该线程持有，则该线程转变为非阻塞状态；</li>
+<li>当线程处于等待另一个线程的条件的时候，该线程进入等待状态。当调用Object.wait或者Thread.join时，会出现等待状态；</li>
+</ul>
 </div>]]></content>
     </entry>
     
