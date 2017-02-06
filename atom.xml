@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woofww.github.io/"/>
-  <updated>2017-02-05T13:35:59.434Z</updated>
+  <updated>2017-02-06T06:28:17.640Z</updated>
   <id>https://woofww.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/"/>
     <id>https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/</id>
     <published>2017-02-02T12:09:21.000Z</published>
-    <updated>2017-02-05T13:35:59.434Z</updated>
+    <updated>2017-02-06T06:28:17.640Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换等内容</p>
@@ -46,6 +46,7 @@
 <li>当线程尝试获取一个内部的对象锁的时候，但是其他线程正在持有该锁，那么请求该锁的线程即将处于阻塞状态；当请求的锁被其他线程释放的时候，同时调度器允许该线程持有，则该线程转变为非阻塞状态；</li>
 <li>当线程处于等待另一个线程的条件的时候，该线程进入等待状态。当调用Object.wait或者Thread.join时，会出现等待状态；</li>
 </ul>
+<h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>在java当中，可以通过调用setDaemon()方法将一个线程转化为守护线程，守护线程的用途是将为其他的线程提供服务，同时守护线程的调用会发生在线程调用之前。</p>
 </div>]]></content>
     
     <summary type="html">

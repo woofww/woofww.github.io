@@ -97,7 +97,7 @@
 
 中断线程当方法当中出现了没有捕获的异常的时候，线程一般来说都会终止。对于早期版本的java的SDK存在着一个stop()方法用来对线程进行终止，但是这个方法已经被弃用。">
 <meta property="og:image" content="https://ww1.sinaimg.cn/large/006tNbRwgy1fceoxr7o7gj30m70al3z3.jpg">
-<meta property="og:updated_time" content="2017-02-05T13:35:59.434Z">
+<meta property="og:updated_time" content="2017-02-06T06:28:17.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Programming-Multithreading(Episode 2)">
 <meta name="twitter:description" content="在本节当中将主要介绍java当中的线程的中断以及线程的各种状态转换等内容
@@ -367,6 +367,7 @@
 <li>当线程尝试获取一个内部的对象锁的时候，但是其他线程正在持有该锁，那么请求该锁的线程即将处于阻塞状态；当请求的锁被其他线程释放的时候，同时调度器允许该线程持有，则该线程转变为非阻塞状态；</li>
 <li>当线程处于等待另一个线程的条件的时候，该线程进入等待状态。当调用Object.wait或者Thread.join时，会出现等待状态；</li>
 </ul>
+<h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>在java当中，可以通过调用setDaemon()方法将一个线程转化为守护线程，守护线程的用途是将为其他的线程提供服务，同时守护线程的调用会发生在线程调用之前。</p>
 </div>
       
     </div>
@@ -564,7 +565,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">1.</span> <span class="nav-text">中断线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程中断的判断"><span class="nav-number">1.1.</span> <span class="nav-text">线程中断的判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断响应"><span class="nav-number">1.2.</span> <span class="nav-text">中断响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程状态"><span class="nav-number">2.</span> <span class="nav-text">线程状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程阻塞和等待"><span class="nav-number">2.1.</span> <span class="nav-text">线程阻塞和等待</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">1.</span> <span class="nav-text">中断线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程中断的判断"><span class="nav-number">1.1.</span> <span class="nav-text">线程中断的判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中断响应"><span class="nav-number">1.2.</span> <span class="nav-text">中断响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程状态"><span class="nav-number">2.</span> <span class="nav-text">线程状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程阻塞和等待"><span class="nav-number">2.1.</span> <span class="nav-text">线程阻塞和等待</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#守护线程"><span class="nav-number">3.</span> <span class="nav-text">守护线程</span></a></li></ol></div>
             
           </div>
         </section>
