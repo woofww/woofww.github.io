@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[Design Pattern-Proxy Pattern]]></title>
+      <url>https://woofww.github.io/2017/02/08/Design-Pattern-Proxy-Pattern/</url>
+      <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li><p>代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。</p>
+</li>
+<li><p>通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。 </p>
+<a id="more"></a>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java Programming-Multithreading(Episode 2)]]></title>
       <url>https://woofww.github.io/2017/02/02/Java-Programming-Multithreading-Episode-2/</url>
       <content type="html"><![CDATA[<blockquote>
