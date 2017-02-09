@@ -98,13 +98,15 @@
 代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。
 
 通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。">
-<meta property="og:updated_time" content="2017-02-08T13:51:09.485Z">
+<meta property="og:image" content="https://javainsider.files.wordpress.com/2014/01/proxy.gif">
+<meta property="og:updated_time" content="2017-02-09T11:55:09.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Design Pattern-Proxy Pattern">
 <meta name="twitter:description" content="概述
 代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。
 
 通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。">
+<meta name="twitter:image" content="https://javainsider.files.wordpress.com/2014/01/proxy.gif">
 
 
 
@@ -347,11 +349,20 @@
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li><p>代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。</p>
 </li>
-<li><p>通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。 </p>
+<li><p>通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。</p>
 <a id="more"></a>
 </li>
 </ul>
-
+<h2 id="设计结构"><a href="#设计结构" class="headerlink" title="设计结构"></a>设计结构</h2><p>代理模式一般包含一下几个object:</p>
+<ul>
+<li>Subject: 抽象主体</li>
+<li>Proxy: 代理主体</li>
+<li>RealSubject: 真实主体</li>
+</ul>
+<p><img src="https://javainsider.files.wordpress.com/2014/01/proxy.gif" alt=""></p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//抽象主体，定义真实对象和代理对象需要实现的行为</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">request</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Proxy</span> <span class="keyword">implements</span> <span class="title">Subject</span></span>&#123;</div><div class="line">    RealSubject realSubject = <span class="keyword">new</span> RealSubject();</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">request</span><span class="params">()</span></span>&#123;</div><div class="line">        preRequest();</div><div class="line">        realSubject.request();</div><div class="line">        afterRequest();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RealSubject</span> <span class="keyword">implements</span> <span class="title">Subject</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">request</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">//进行的操作</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">    Subject proxy = <span class="keyword">new</span> proxy();</div><div class="line">    proxy.operation();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当项目比较小的时候，使用代理类很可能会给开发者一种繁杂多余的错觉，但是代理类的实现对于开发粒度的控制很有好处，然而伴随着类的方法越来越多，代码量也会急剧上升，这时候便引入了动态代理的概念。</p>
+<h2 id="待续。"><a href="#待续。" class="headerlink" title="待续。"></a>待续。</h2>
       
     </div>
 
@@ -548,7 +559,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计结构"><span class="nav-number">2.</span> <span class="nav-text">设计结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待续。"><span class="nav-number">4.</span> <span class="nav-text">待续。</span></a></li></ol></div>
             
           </div>
         </section>
