@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woofww.github.io/"/>
-  <updated>2017-02-20T02:18:55.172Z</updated>
+  <updated>2017-03-01T07:49:59.363Z</updated>
   <id>https://woofww.github.io/</id>
   
   <author>
@@ -20,15 +20,15 @@
     <link href="https://woofww.github.io/2017/02/08/Design-Pattern-Proxy-Pattern/"/>
     <id>https://woofww.github.io/2017/02/08/Design-Pattern-Proxy-Pattern/</id>
     <published>2017-02-08T13:31:18.000Z</published>
-    <updated>2017-02-20T02:18:55.172Z</updated>
+    <updated>2017-03-01T07:49:59.363Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li><p>代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。</p>
 </li>
 <li><p>通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。</p>
-<a id="more"></a>
 </li>
 </ul>
+<a id="more"></a>
 <h2 id="设计结构"><a href="#设计结构" class="headerlink" title="设计结构"></a>设计结构</h2><p>代理模式一般包含一下几个object:</p>
 <ul>
 <li>Subject: 抽象主体</li>
@@ -63,6 +63,8 @@
 &lt;li&gt;&lt;p&gt;代理模式简单来说就是以一种间接的方式来实现对对象的引用(当Client不希望自身直接引用对象的时候)，利用代理对象实现一种中介的作用。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;通过加入一个新的代理对象来对真实的对象进行操作或者把代理的对象当作一个真实的对象的替身，这种机制就可以称为代理模式，即由代理对象来完成对一个对象的访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -332,9 +334,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -471,9 +473,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -727,9 +729,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
@@ -738,7 +740,7 @@
     <link href="https://woofww.github.io/2016/12/07/Algorithm-Advanced-Sorting/"/>
     <id>https://woofww.github.io/2016/12/07/Algorithm-Advanced-Sorting/</id>
     <published>2016-12-07T13:30:31.000Z</published>
-    <updated>2016-12-17T11:22:51.804Z</updated>
+    <updated>2017-03-30T15:48:25.913Z</updated>
     
     <content type="html"><![CDATA[<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><blockquote>
 <p>复杂度(nlogn)</p>
@@ -863,6 +865,8 @@
     
     
       <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
+    
+      <category term="Java" scheme="https://woofww.github.io/tags/Java/"/>
     
   </entry>
   
@@ -1015,9 +1019,9 @@
       <category term="Technique" scheme="https://woofww.github.io/categories/Technique/"/>
     
     
-      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
-    
       <category term="Data Structure" scheme="https://woofww.github.io/tags/Data-Structure/"/>
+    
+      <category term="Algorithm" scheme="https://woofww.github.io/tags/Algorithm/"/>
     
   </entry>
   
